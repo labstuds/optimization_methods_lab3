@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcOGM = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gbCountMethods = new System.Windows.Forms.GroupBox();
@@ -50,7 +50,7 @@
             this.tbOGMAnswer = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCountOGM = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.tcOGM.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbCountMethods.SuspendLayout();
             this.gbCountProcess.SuspendLayout();
@@ -64,16 +64,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEps)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tcOGM
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 16);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(581, 171);
-            this.tabControl1.TabIndex = 0;
+            this.tcOGM.Controls.Add(this.tabPage1);
+            this.tcOGM.Controls.Add(this.tabPage2);
+            this.tcOGM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcOGM.Location = new System.Drawing.Point(3, 16);
+            this.tcOGM.Name = "tcOGM";
+            this.tcOGM.SelectedIndex = 0;
+            this.tcOGM.Size = new System.Drawing.Size(581, 171);
+            this.tcOGM.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -103,7 +103,7 @@
             // 
             // gbCountMethods
             // 
-            this.gbCountMethods.Controls.Add(this.tabControl1);
+            this.gbCountMethods.Controls.Add(this.tcOGM);
             this.gbCountMethods.Location = new System.Drawing.Point(12, 12);
             this.gbCountMethods.Name = "gbCountMethods";
             this.gbCountMethods.Size = new System.Drawing.Size(587, 190);
@@ -329,6 +329,7 @@
             this.btnCountOGM.TabIndex = 5;
             this.btnCountOGM.Text = "Рассчитать";
             this.btnCountOGM.UseVisualStyleBackColor = true;
+            this.btnCountOGM.Click += new System.EventHandler(this.btnCountOGM_Click);
             // 
             // Form1
             // 
@@ -341,7 +342,7 @@
             this.MinimumSize = new System.Drawing.Size(631, 407);
             this.Name = "Form1";
             this.Text = "Лабораторная работа №3";
-            this.tabControl1.ResumeLayout(false);
+            this.tcOGM.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.gbCountMethods.ResumeLayout(false);
@@ -363,7 +364,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tcOGM;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnCountOGM;
         private System.Windows.Forms.Label label6;
