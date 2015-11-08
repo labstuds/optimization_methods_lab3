@@ -41,13 +41,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nudStartX1 = new System.Windows.Forms.NumericUpDown();
             this.nudStartX2 = new System.Windows.Forms.NumericUpDown();
-            this.nudH = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.nudHX2 = new System.Windows.Forms.NumericUpDown();
             this.nudEps = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.tbOGMAnswer = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCountOGM = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nudHX1 = new System.Windows.Forms.NumericUpDown();
             this.tcOGM.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbCountMethods.SuspendLayout();
@@ -57,8 +58,9 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartX1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartX2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHX2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEps)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHX1)).BeginInit();
             this.SuspendLayout();
             // 
             // tcOGM
@@ -142,7 +144,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.nudH);
+            this.groupBox4.Controls.Add(this.nudHX1);
+            this.groupBox4.Controls.Add(this.nudHX2);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(212, 6);
             this.groupBox4.Name = "groupBox4";
@@ -194,6 +197,11 @@
             232830643,
             0,
             0});
+            this.nudStartX1.Minimum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            -2147483648});
             this.nudStartX1.Name = "nudStartX1";
             this.nudStartX1.Size = new System.Drawing.Size(120, 20);
             this.nudStartX1.TabIndex = 2;
@@ -212,37 +220,32 @@
             232830643,
             0,
             0});
+            this.nudStartX2.Minimum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            -2147483648});
             this.nudStartX2.Name = "nudStartX2";
             this.nudStartX2.Size = new System.Drawing.Size(120, 20);
             this.nudStartX2.TabIndex = 3;
             // 
-            // nudH
+            // nudHX2
             // 
-            this.nudH.DecimalPlaces = 2;
-            this.nudH.Increment = new decimal(new int[] {
+            this.nudHX2.DecimalPlaces = 5;
+            this.nudHX2.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.nudH.Location = new System.Drawing.Point(10, 49);
-            this.nudH.Maximum = new decimal(new int[] {
+            this.nudHX2.Location = new System.Drawing.Point(72, 49);
+            this.nudHX2.Maximum = new decimal(new int[] {
             -1486618624,
             232830643,
             0,
             0});
-            this.nudH.Name = "nudH";
-            this.nudH.Size = new System.Drawing.Size(184, 20);
-            this.nudH.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(73, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Шаг h";
+            this.nudHX2.Name = "nudHX2";
+            this.nudHX2.Size = new System.Drawing.Size(122, 20);
+            this.nudHX2.TabIndex = 6;
             // 
             // nudEps
             // 
@@ -300,6 +303,34 @@
             this.btnCountOGM.UseVisualStyleBackColor = true;
             this.btnCountOGM.Click += new System.EventHandler(this.btnCountOGM_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(10, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Шаг h";
+            // 
+            // nudHX1
+            // 
+            this.nudHX1.DecimalPlaces = 5;
+            this.nudHX1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nudHX1.Location = new System.Drawing.Point(72, 19);
+            this.nudHX1.Maximum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            0});
+            this.nudHX1.Name = "nudHX1";
+            this.nudHX1.Size = new System.Drawing.Size(122, 20);
+            this.nudHX1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,8 +355,9 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartX1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartX2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHX2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEps)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHX1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,8 +373,7 @@
         private System.Windows.Forms.NumericUpDown nudEps;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.NumericUpDown nudH;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown nudHX2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.NumericUpDown nudStartX2;
         private System.Windows.Forms.NumericUpDown nudStartX1;
@@ -352,6 +383,8 @@
         private System.Windows.Forms.GroupBox gbCountMethods;
         private System.Windows.Forms.GroupBox gbCountProcess;
         private System.Windows.Forms.RichTextBox rtbLog;
+        private System.Windows.Forms.NumericUpDown nudHX1;
+        private System.Windows.Forms.Label label4;
     }
 }
 

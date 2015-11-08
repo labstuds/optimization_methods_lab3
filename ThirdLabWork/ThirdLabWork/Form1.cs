@@ -20,9 +20,10 @@ namespace ThirdLabWork
 
         private void btnCountOGM_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        
+            Vector2 h = new Vector2((double)nudHX1.Value, (double)nudHX2.Value);
+            Vector2 args = new Vector2((double)nudStartX1.Value, (double)nudStartX2.Value);
+            Vector2 answer = OptimalGradientMethod.findMinimum(args, h, (double)nudEps.Value);
+            tbOGMAnswer.Text = string.Format("Minimum is here: x* = ({0:N4};{1:N4})", answer.X, answer.Y);
+        }        
     }
 }

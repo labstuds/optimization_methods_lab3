@@ -10,7 +10,7 @@ namespace ThirdLabWork
     /// </summary>
     abstract class CountFirstOrderPartialDerivatives
     {
-        public abstract Vector2 countDerivative(double h, Vector2 args, Func<Vector2, double> func);             
+        public abstract Vector2 countDerivative(Vector2 h, Vector2 args, Func<Vector2, double> func);             
     }
 
     class CountRightScheme : CountFirstOrderPartialDerivatives
@@ -28,13 +28,13 @@ namespace ThirdLabWork
         
         private CountRightScheme()
         {
-            instance = new CountRightScheme();
+
         }
 
-        public override Vector2 countDerivative(double h, Vector2 args, Func<Vector2, double> func)
+        public override Vector2 countDerivative(Vector2 h, Vector2 args, Func<Vector2, double> func)
         {
-            double x1 = (func(new Vector2(args.X + h, args.Y)) - func(args)) / h;
-            double x2 = (func(new Vector2(args.X, args.Y + h)) - func(args)) / h;
+            double x1 = (func(new Vector2(args.X + h.X, args.Y)) - func(args)) / h.X;
+            double x2 = (func(new Vector2(args.X, args.Y + h.Y)) - func(args)) / h.Y;
             return new Vector2(x1, x2);
         }        
     }
@@ -54,12 +54,14 @@ namespace ThirdLabWork
 
         private CountCentralScheme()
         {
-            instance = new CountCentralScheme();
+
         }
 
-        public override Vector2 countDerivative(double h, Vector2 args, Func<Vector2, double> func)
+        public override Vector2 countDerivative(Vector2 h, Vector2 args, Func<Vector2, double> func)
         {
-            throw new NotImplementedException();
+            double x1 = (func(new Vector2(args.X + h.X/2, args.Y)) - func(new Vector2(args.X + h.X/2, args.Y))) / h.X;
+            double x2 = (func(new Vector2(args.X, args.Y + h.Y / 2)) - func(new Vector2(args.X, args.Y - h.Y / 2))) / h.Y;
+            return new Vector2(x1, x2);
         }
     }
 }

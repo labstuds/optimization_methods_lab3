@@ -135,6 +135,11 @@ namespace ThirdLabWork
             return new Vector2(v1.x + constant, v1.y + constant);
         }
 
+        public static Vector2 operator-(Vector2 v1, double constant)
+        {
+            return new Vector2(v1.x - constant, v1.y - constant);
+        }
+
         public double Length
         {
             get { return Math.Sqrt(x*x+y*y);}
