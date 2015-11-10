@@ -16,7 +16,7 @@ namespace ThirdLabWork
         // Для рандомного вектора
         public static Vector2 getRandomVectorKsi()
         {
-            Random rnd = new Random();            
+            Random rnd = new Random();
             double x = 2 * rnd.NextDouble() - 1;
             double y = 2 * rnd.NextDouble() - 1;
             return new Vector2(x, y);
@@ -33,7 +33,7 @@ namespace ThirdLabWork
             return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
         }
         ///////////////////////////////////////
-        
+
         public Vector2(double x, double y)
         {
             this.x = x;
@@ -117,7 +117,7 @@ namespace ThirdLabWork
 
         public static bool operator !=(Vector2 v1, Vector2 v2)
         {
-            return !(v1==v2);
+            return !(v1 == v2);
         }
 
         public static Vector2 operator *(double constant, Vector2 v1)
@@ -130,19 +130,19 @@ namespace ThirdLabWork
             return new Vector2(v1.X / constant, v1.Y / constant);
         }
 
-        public static Vector2 operator+(Vector2 v1, double constant)
+        public static Vector2 operator +(Vector2 v1, double constant)
         {
             return new Vector2(v1.x + constant, v1.y + constant);
         }
 
-        public static Vector2 operator-(Vector2 v1, double constant)
+        public static Vector2 operator -(Vector2 v1, double constant)
         {
             return new Vector2(v1.x - constant, v1.y - constant);
         }
 
         public double Length
         {
-            get { return Math.Sqrt(x*x+y*y);}
+            get { return Math.Sqrt(x * x + y * y); }
         }
 
         public static Vector2 Right
@@ -159,7 +159,7 @@ namespace ThirdLabWork
             return new Vector2(this.x, this.y);
         }
         /// <summary>
-        /// не скалярное умножение
+        /// не скалярное умножение, а просто x на x и y на y
         /// </summary>
         /// <param name="v1"></param>
         /// <param name="v2"></param>
@@ -192,6 +192,91 @@ namespace ThirdLabWork
         {
             string outPut = string.Format("({0:f3};{1:f3})", x, y);
             return outPut;
+        }
+
+        public double this[int index]
+        {
+            get { return get(index); }
+            set { set(index, value); }
+        }
+
+        public static Matrix multiplieTransp(Vector2 v1,Vector2 v2)
+        {
+            Matrix result = new Matrix(2);
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    result[i,j] += v1[i] * v2[j];
+                }
+            }
+            return result;
+        }
+    }
+
+    public class Matrix
+    {
+        double[] values;
+        int size;
+        /// <summary>
+        /// Инициализирует матрицу с нулями
+        /// </summary>
+        public Matrix(int size)
+        {
+            values = new double[size*size];
+            for(int i=0;i<size*size;i++)
+            {
+                values[i] = 0;
+            }
+        }
+
+        public Matrix(double[] values)
+        {
+            if (Math.Sqrt(values.Length) % 1 != 0)
+                throw new ArgumentException("Матрица не квадратная");
+            size = (int)Math.Sqrt(values.Length);
+            this.values = values;
+        }
+
+        public Matrix getIdentityMatrix(int size)
+        {
+            //TO DO написать генератор единичной матрицы
+        }
+
+        public static Vector2 operator*(Matrix matr,Vector2 vec)
+        {
+            Vector2 result=new Vector2(0,0);
+            for (int i = 0; i < matr.Size; i++)
+            {
+                for (int j = 0; j < matr.Size; j++)
+                {
+                    result[i] += vec[j]*matr[i,j];
+                }
+            }
+            return result;
+        }
+
+        public static Vector2 multiplieTransp(Matrix matr,Vector2 likeTranspVector)
+        {
+            Vector2 result = new Vector2(0, 0);
+            for (int i = 0; i < matr.Size; i++)
+            {
+                for (int j = 0; j < matr.Size; j++)
+                {
+                    result[i] += likeTranspVector[j] * matr[j, i];
+                }
+            }
+            return result;
+        }
+        public int Size
+        {
+            get { return size; }
+        }
+
+        public double this[int i,int j]
+        {
+            get {return values[i*2+j];}
+            set { values[i * 2 + j] = value; }
         }
     }
 }
