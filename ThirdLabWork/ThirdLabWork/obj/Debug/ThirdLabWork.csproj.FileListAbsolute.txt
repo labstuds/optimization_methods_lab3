@@ -16,3 +16,5 @@ D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabW
 D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.csproj.GenerateResource.Cache
 D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\MathNet.Numerics.dll
 D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\MathNet.Numerics.xml
+c:\work\_git\OptimizationMethods\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\MathNet.Numerics.dll
+c:\work\_git\OptimizationMethods\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\MathNet.Numerics.xml

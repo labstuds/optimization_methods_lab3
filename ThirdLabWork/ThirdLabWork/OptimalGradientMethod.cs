@@ -11,7 +11,7 @@ namespace ThirdLabWork
         /// <summary>
         /// Найти точку, в которой функция минимальна
         /// </summary>
-        public static Vector2 findMinimum(Vector2 startX, double alpha, double eps, Func<Vector2, double> taskFunction)
+        public static Vector2 findMinimum(Vector2 startX, double alpha, double eps, Func<Vector2, double> taskFunction, double dichotomyEpsilon, double DSKStep)
         {
             LoggerEvs.writeLog("Optimal gradient method started!");
             Vector2 answer = new Vector2();
@@ -43,8 +43,9 @@ namespace ThirdLabWork
                 {
                     // Шаг 4                    
                     // Провести метод одномерной оптимизации
-                    Interval alphaValues = DSKMethodCounter.countInterval(taskFunction, alpha, args, gradientValue, 0.01);
-                    alpha = DichotomyMethodCounter.findMinimum(taskFunction, alphaValues, 0.01, args, gradientValue);
+                    Interval alphaValues = DSKMethodCounter.countInterval(taskFunction, alpha, args, gradientValue, DSKStep);
+                    alpha = DichotomyMethodCounter.findMinimum(taskFunction, alphaValues, dichotomyEpsilon, args, gradientValue);
+
                     LoggerEvs.writeLog(string.Format("Step 4: Alpha = {0};", alpha));
                     // Шаг 5
                     args = args - alpha * gradientValue;

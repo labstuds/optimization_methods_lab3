@@ -11,7 +11,7 @@ namespace ThirdLabWork
         Matrix<double> basicX;
         double eps;
         Matrix<double> result = Matrix<double>.Build.Dense(2, 1, 0);
-        double alpha = 0.09542f;
+        double alpha = 0.001f;
         public DFPSolver()
         {
 
@@ -25,7 +25,7 @@ namespace ThirdLabWork
             this.eps = eps;
         }
 
-        public Vector2 calculate(Func<Vector2, double> taskFunction)
+        public Vector2 calculate(Func<Vector2, double> taskFunction, double h, double epsDich)
         {
             LoggerEvs.writeLog("DFP method started");
             Matrix<double> grad = Matrix<double>.Build.Dense(2,1,0);
@@ -73,18 +73,18 @@ namespace ThirdLabWork
             LoggerEvs.writeLog(string.Format("Step 7: Quasi-Newton matrix: \r\n{0}", Hk));
         step8:
             Vector2 tempPk = CountRightScheme.Instance.countDerivative(alpha, new Vector2(xk[0, 0], xk[1, 0]), taskFunction);
-            Matrix<double> azaza = Matrix<double>.Build.Dense(2, 1, 0);
-            azaza[0, 0] = tempPk.X;
-            azaza[1, 0] = tempPk.Y;
-            pk = -Hk * azaza;
+            Matrix<double> test = Matrix<double>.Build.Dense(2, 1, 0);
+            test[0, 0] = tempPk.X;
+            test[1, 0] = tempPk.Y;
+            pk = -Hk * test;
             
             LoggerEvs.writeLog(string.Format("Step 8: Search vector: {0}", pk));
         step9:
             Matrix<double> tmpxk = xk + alpha * pk;
-            Vector2 gradientValue = CountRightScheme.Instance.countDerivative(alpha, new Vector2(tmpxk[0, 0], tmpxk[1, 0]), taskFunction);
-            Interval alphaValues = DSKMethodCounter.countInterval(taskFunction, alpha, new Vector2(tmpxk[0, 0], tmpxk[1, 0]), gradientValue, eps);
+            Vector2 gradientValue = CountRightScheme.Instance.countDerivative(alpha, new Vector2(tmpxk[0, 0], tmpxk[1, 0]), taskFunction);            
+            Interval alphaValues = DSKMethodCounter.countInterval(taskFunction, alpha, new Vector2(tmpxk[0, 0], tmpxk[1, 0]), gradientValue, h);
             
-            alpha = DichotomyMethodCounter.findMinimum(taskFunction, alphaValues, eps, new Vector2(tmpxk[0, 0], tmpxk[1, 0]), gradientValue);
+            alpha = DichotomyMethodCounter.findMinimum(taskFunction, alphaValues, epsDich, new Vector2(tmpxk[0, 0], tmpxk[1, 0]), gradientValue);
             LoggerEvs.writeLog(string.Format("Step 9: New alpha {0}", alpha));
         step10:
             xk_1 = xk;
@@ -101,10 +101,10 @@ namespace ThirdLabWork
             return result;
         }
 
-        public Vector2 returnApproximateSolution(Vector2 x, double eps, Func<Vector2, double> taskFunction)
+        public Vector2 returnApproximateSolution(Vector2 x, double eps, Func<Vector2, double> taskFunction, double h, double epsDich)
         {
             setStartingVariables(x, eps);
-            return calculate(taskFunction);
+            return calculate(taskFunction, h, epsDich);
         }
     }
 }
