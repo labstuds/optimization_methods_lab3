@@ -8,3 +8,11 @@ c:\work\_git\OptimizationMethods\optimization_methods_lab3\ThirdLabWork\ThirdLab
 c:\work\_git\OptimizationMethods\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.exe
 c:\work\_git\OptimizationMethods\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.pdb
 c:\work\_git\OptimizationMethods\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.csprojResolveAssemblyReference.cache
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\ThirdLabWork.exe
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\ThirdLabWork.pdb
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.csprojResolveAssemblyReference.cache
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.Form1.resources
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.Properties.Resources.resources
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\obj\Debug\ThirdLabWork.csproj.GenerateResource.Cache
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\MathNet.Numerics.dll
+D:\Repos\optimization_methods_lab3\ThirdLabWork\ThirdLabWork\bin\Debug\MathNet.Numerics.xml

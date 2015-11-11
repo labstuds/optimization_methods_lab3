@@ -228,6 +228,7 @@ namespace ThirdLabWork
             {
                 values[i] = 0;
             }
+            this.size = size;
         }
 
         public Matrix(double[] values)
@@ -238,12 +239,175 @@ namespace ThirdLabWork
             this.values = values;
         }
 
-        /*
-        public Matrix getIdentityMatrix(int size)
+        
+        public static Matrix getIdentityMatrix(int size)
         {
-            //TO DO написать генератор единичной матрицы
+            Matrix matr = new Matrix(size);
+            for (int j = 0; j < matr.Size; j++)
+            {
+                matr[j, j] = 1;
+            }
+            return matr;
         }
-        */
+
+        public static Matrix operator-(Matrix a, Matrix b)
+        {
+            if(a.Size!=b.Size)
+            {
+                //пшол вон псих
+                throw new ArgumentException("Нельзя вычитать матрицы разных размеров");
+            }
+            Matrix result = new Matrix(a.Size);
+            for (int i = 0; i < a.Size; i++)
+            {
+                for (int j = 0; j < a.Size; j++)
+                {
+                    result[i, j] = a[i, j] - b[i, j];
+                }
+            }
+            return result;
+        }
+
+        public static Matrix operator /(Matrix a, double b)
+        {
+            Matrix result = new Matrix(a.Size);
+            for(int i=0;i<a.Size;i++)
+            {
+                for(int j=0;j<a.Size;j++)
+                {
+                    result[i, j] = a[i, j] / b;
+                }
+            }
+            return result;
+        }
+
+        public static Matrix operator *(Matrix a, double b)
+        {
+            return a / (1 / b);
+        }
+
+        public static Matrix operator /(Matrix a,Matrix b)
+        {
+            if (a.Size != b.Size)
+            {
+                //пшол вон псих, кого понабирали, поглядите
+                throw new ArgumentException("Нельзя делить матрицы разных размеров");
+            }
+            Matrix result = new Matrix(a.Size);
+            result = a * (b.GetTranspMatrix() / b.getDeterminator());
+            return result;
+        }
+
+        public static Matrix operator-(Matrix a)
+        {
+            return a*(-1);
+        }
+
+        public static Matrix operator +(Matrix a, Matrix b)
+        {
+            if (a.Size != b.Size)
+            {
+                //пшол вон псих
+                throw new ArgumentException("Нельзя вычитать матрицы разных размеров");
+            }
+            Matrix result = new Matrix(a.Size);
+            for (int i = 0; i < a.Size; i++)
+            {
+                for (int j = 0; j < a.Size; j++)
+                {
+                    result[i, j] = a[i, j] + b[i, j];
+                }
+            }
+            return result;
+        }
+
+        public Matrix GetTranspMatrix()
+        {
+            Matrix result = new Matrix(this.Size);
+            for (int i = 0; i < this.Size; i++)
+            {
+                for (int j = 0; j < this.Size; j++)
+                {
+                    result[i, j] = this[j, i];
+                }
+            }
+            return result;
+        }
+
+        public double getDeterminator()
+        {
+            double det = 0;
+            double EPS = 1E-8;
+            Matrix a = this;
+            Matrix b = new Matrix(a.Size);
+            int n = a.Size;
+            for (int i = 0; i < n; ++i)
+            {
+                int k = i;
+                for (int j = i + 1; j < n; ++j)
+                    if (Math.Abs(a[j,i]) > Math.Abs(a[k,i]))
+                        k = j;
+                if (Math.Abs(a[k,i]) < EPS)
+                {
+                    det = 0;
+                    break;
+                }
+                Matrix.swapStrings(ref a, ref a, i, k);
+                if (i != k)
+                    det = -det;
+                det *= a[i,i];
+                for (int j = i + 1; j < n; ++j)
+                    a[i,j] /= a[i,i];
+                for (int j = 0; j < n; ++j)
+                    if ((j != i) && (Math.Abs(a[j,i]) > EPS))
+                        for (k = i + 1; k < n; ++k)
+                            a[j,k] -= a[i,k] * a[j,i];
+            }
+            return det;
+        }
+
+        /// <summary>
+        /// Swap Strings in Matrix. Also, you can swap strings in one matrix
+        /// </summary>
+        /// <param name="a">First Matrix</param>
+        /// <param name="b">Second Matrix</param>
+        /// <param name="aStringIndex">index in first matrix</param>
+        /// <param name="bStringIndex">index in second matrix</param>
+        public static void swapStrings(ref Matrix a,ref Matrix b, int aStringIndex, int bStringIndex)
+        {
+            if(a.Size!=b.Size)
+            {
+                throw new ArgumentException("Невозможно поменять местами строки матрицы с несовпадающими размерами");
+            }
+            double temp = 0;
+            for(int i=0;i<a.Size;i++)
+            {
+                temp = a[aStringIndex, i];
+                a[aStringIndex, i] = b[bStringIndex, i];
+                b[bStringIndex, i] = temp;
+            }
+        }
+
+        public static Matrix operator *(Matrix a, Matrix b)
+        {
+            if (a.Size != b.Size)
+            {
+                throw new ArgumentException("Не поддерживается умножение матриц с разными размерами");
+            }
+            Matrix result = new Matrix(a.Size);
+            for (int i = 0; i < a.Size; i++)
+            {
+                for (int j = 0; j < a.Size; j++)
+                {
+                    for (int k = 0; k < a.Size; k++)
+                    {
+                        result[i, j] += a[i, k] * b[k, j];
+                    }
+                }
+            }
+            return result;
+        }
+        
 
         public static Vector2 operator*(Matrix matr,Vector2 vec)
         {
@@ -279,6 +443,20 @@ namespace ThirdLabWork
         {
             get {return values[i*2+j];}
             set { values[i * 2 + j] = value; }
+        }
+
+        public override string ToString()
+        {
+            String result = "";
+            for (int i = 0; i < this.Size; i++)
+            {
+                for (int j = 0; j < this.Size; j++)
+                {
+                    result += this[i, j]+"  ";
+                }
+                result += "\r\n";
+            }
+            return result;
         }
     }
 }

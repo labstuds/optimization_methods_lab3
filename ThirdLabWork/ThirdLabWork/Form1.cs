@@ -12,11 +12,12 @@ namespace ThirdLabWork
     public partial class Form1 : Form
     {
         
-
+        private DFPSolver DFPCalculator;
         public Form1()
         {
             InitializeComponent();
             LoggerEvs.messageCame += addLogNoteToWidget;
+            DFPCalculator = new DFPSolver();
         }
 
         private void addLogNoteToWidget(string logNote)
@@ -38,7 +39,8 @@ namespace ThirdLabWork
 
         private void DFPCalculateButton_Click(object sender, EventArgs e)
         {
-
+            Vector2 result = DFPCalculator.returnApproximateSolution(new Vector2((double)this.DFPMethodX0Numeric.Value, (double)this.DFPMethodX1Numeric.Value), (double)this.DFPMethodEpsNumeric.Value, taskFunction);
+            DFPMethodAnswerLabel.Text = String.Format("Ответ: Fmin({0})={1}",result,taskFunction(result));
         }
 
         public static double taskFunction(Vector2 args)

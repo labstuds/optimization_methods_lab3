@@ -1,0 +1,29 @@
+[11.11.2015 23:38:49] DFP method started
+[11.11.2015 23:38:49] Input data. Start point DenseMatrix 2x1-Double
+0
+0
+, epsilon 0,01000
+[11.11.2015 23:38:49] Step 1: K = 0
+[11.11.2015 23:38:49] Step 2: ITERATION number 0
+[11.11.2015 23:38:49] Step 4: K==0, go to step 8.
+[11.11.2015 23:39:56] Step 8: Search vector: DenseMatrix 2x1-Double
+ 16,003
+23,2396
+
+[11.11.2015 23:39:56] DSK method started!
+[11.11.2015 23:39:56] Step 1: f(alpha)=41,9208, f(alpha + h)=33,0106; k=0;
+[11.11.2015 23:39:56] Step 2: a=0,0954, alpha1=0,1054, k=2; Go to step 4!
+[11.11.2015 23:39:56] Step 4: alphak=0,1154
+[11.11.2015 23:39:56] Step 5: h > 0; a=alpha(k-1)=0,1054
+[11.11.2015 23:39:56] k = k + 1 = 3; Go to step 4!
+[11.11.2015 23:39:56] Step 4: alphak=0,1354
+[11.11.2015 23:39:56] Step 5: h > 0; b=alphak=0,1354
+[11.11.2015 23:39:56] Step 6: Interval is: [0,1054 ; 0,1354]
+[11.11.2015 23:39:56] Dichotomy method has been started!
+[11.11.2015 23:39:56] Counting: delta = eps / 10 = 0,001
+[11.11.2015 23:39:56] Step 1: counting alpha_1 = 0,1194, alpha_2 = 0,1214
+[11.11.2015 23:39:56] Step 3: f(0,1194) = 27,7369 <= f(0,1214) = 27,8248; b = alpha_2 = 0,1214.
+[11.11.2015 23:39:56] Step 4: (b-a)/2 = 0,0080 < eps = 0,0100; STOP SEARCHING!
+[11.11.2015 23:39:56] Iter 0: Answer is in the range: [0,1054; 0,1214]
+[11.11.2015 23:39:56] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,1134
+[11.11.2015 23:39:56] Step 9: New alpha 0,113420002937317
