@@ -16,19 +16,34 @@ namespace ThirdLabWork
         public Form1()
         {
             InitializeComponent();
+            LoggerEvs.messageCame += addLogNoteToWidget;
+        }
+
+        private void addLogNoteToWidget(string logNote)
+        {
+            rtbLog.AppendText(logNote);
+            rtbLog.ScrollToCaret();
         }
 
         private void btnCountOGM_Click(object sender, EventArgs e)
         {
-            Vector2 h = new Vector2((double)nudHX1.Value, (double)nudHX2.Value);
+            double h = (double)nudH.Value;  // Начальный шаг
+            // Начальные аргументы функции (x1 и x2)
             Vector2 args = new Vector2((double)nudStartX1.Value, (double)nudStartX2.Value);
-            Vector2 answer = OptimalGradientMethod.findMinimum(args, h, (double)nudEps.Value);
-            tbOGMAnswer.Text = string.Format("Minimum is here: x* = ({0:N4};{1:N4})", answer.X, answer.Y);
+            // Точка, в которой функция принимает минимальное значение, расчет
+            Vector2 answer = OptimalGradientMethod.findMinimum(args, h, (double)nudEps.Value, taskFunction);
+            // Вывод результата расчетов
+            tbOGMAnswer.Text = string.Format("Minimum is ({0:N3};{1:N3})", answer.X, answer.Y);
         }
 
         private void DFPCalculateButton_Click(object sender, EventArgs e)
         {
 
-        }        
+        }
+
+        public static double taskFunction(Vector2 args)
+        {
+            return Math.Pow(Math.Pow(args.X, 2) + args.Y - 11, 2) + Math.Pow(args.X + Math.Pow(args.Y, 2) - 7, 2);
+        }
     }
 }

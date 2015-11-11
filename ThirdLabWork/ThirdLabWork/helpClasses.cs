@@ -238,10 +238,12 @@ namespace ThirdLabWork
             this.values = values;
         }
 
+        /*
         public Matrix getIdentityMatrix(int size)
         {
             //TO DO написать генератор единичной матрицы
         }
+        */
 
         public static Vector2 operator*(Matrix matr,Vector2 vec)
         {
