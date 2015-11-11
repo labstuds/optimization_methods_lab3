@@ -3,148 +3,105 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace ThirdLabWork
 {
     public static class DSKMethodCounter
     {
-        public static Interval countInterval(Func<Vector2, double> countFunctionValue, Vector2 h, Vector2 x_0, bool fixLeftEdge)
+        /// <summary>
+        /// Найти интервал значений шага альфа, при которых функция будет минимальна
+        /// </summary>
+        /// <param name="taskFunction">Расчетная функция</param>
+        /// <param name="alpha">Шаг альфа</param>
+        /// <param name="args">Аргументы функции (координаты точки (x1;x2))</param>
+        /// <param name="gradient">Градиент (вектор ЧП 1-го порядка)</param>
+        /// <param name="h">Шаг, с которым будет изменяться альфа в процессе поиска интервала</param>
+        /// <returns></returns>
+        public static Interval countInterval(Func<Vector2, double> taskFunction, double alpha, Vector2 args, Vector2 gradient, double h)
         {
             LoggerEvs.writeLog("DSK method started!");
-            Interval answer = new Interval(0,0);
-            int functionNumber = 0;                         // Номер функции                        
-            double f_x_0;                                   // Значение функции в точке x_0
-            double f_x_0_h;                                 // Значение функции в точке x_0 + h            
+            Interval answer = new Interval();
+            double f_alpha;                                   // Значение функции в точке alpha
+            double f_alpha_h;                                 // Значение функции в точке alpha + h            
             bool searchEnd = false;                         // Конец поиска            
-            List<double> x_values = new List<double>();     // Коллекция значений x_0
-            if (!fixLeftEdge)
-                x_values.Add(x_0.X);
-            else
-                x_values.Add(x_0.Y);
-
-            Vector2 args;
-            if(!fixLeftEdge)
-                args = new Vector2(x_0.X, 0);
-            else 
-                args = new Vector2(0, x_0.Y);
-
+            List<double> alphavalues = new List<double>();     // Коллекция значений alpha
+            alphavalues.Add(alpha);
             // Шаг 1
-            f_x_0 = countFunctionValue(args);
-            if (!fixLeftEdge)
-                args.X += h.X;
-            else
-                args.Y += h.Y;
-            f_x_0_h = countFunctionValue(args);
+            f_alpha = taskFunction(args - alpha * gradient);
+            f_alpha_h = taskFunction(args - (alpha + h) * gradient);
             int k = 0;
-            
+            LoggerEvs.writeLog("Step 1: f(alpha)=" + f_alpha.ToString("f4") + ", f(alpha + h)=" + f_alpha_h.ToString("f4") + "; k=0;");
             // Шаг 2
-            if (f_x_0 > f_x_0_h)
-            {
-                if (!fixLeftEdge)
-                {
-                    answer.LeftEdge = x_0.X;
-                    double x_tmp = x_0.X + h.X;
-                    x_values.Add(x_tmp);
-                }
-                else
-                {
-                    answer.LeftEdge = x_0.Y;
-                    double x_tmp = x_0.Y + h.Y;
-                    x_values.Add(x_tmp);
-                }
-                k = 2;                
+            if (f_alpha > f_alpha_h)
+            {                
+                answer.LeftEdge = alpha;
+                double alpha_tmp = alpha + h;
+                alphavalues.Add(alpha_tmp);
+                k = 2;
+                LoggerEvs.writeLog("Step 2: a=" + alpha.ToString("f4") + ", alpha1=" + alpha_tmp.ToString("f4") + ", k=2; Go to step 4!");
                 // Перейти на шаг 4
             }
             else
             {
                 // Шаг 3
-                double tmpFunc;
-                if (!fixLeftEdge)
-                    tmpFunc = countFunctionValue(new Vector2(args.X - h.X, args.Y));
-                else
-                    tmpFunc = countFunctionValue(new Vector2(args.X, args.Y - h.Y));
-
-                if (tmpFunc >= f_x_0)
+                if (taskFunction(args - (alpha - h) * gradient) >= f_alpha)
                 {
-                    if (!fixLeftEdge)
-                    {
-                        answer.LeftEdge = x_0.X - h.X;
-                        answer.RightEdge = x_0.X + h.X;
-                    }
-                    else
-                    {
-                        answer.LeftEdge = x_0.Y - h.Y;
-                        answer.RightEdge = x_0.Y + h.Y;
-                    }
+                    answer.LeftEdge = alpha - h;
+                    answer.RightEdge = alpha + h;
+                    LoggerEvs.writeLog("Step 3: a=" + answer.LeftEdge.ToString("f4") + ", b=" + answer.RightEdge.ToString("f4") + "; Go to step 6!");
                     // Перейти на шаг 6
                     searchEnd = true;
                 }
                 else
                 {
-                    if (!fixLeftEdge)
-                    {
-                        answer.RightEdge = x_0.X;
-                        x_values.Insert(1, x_0.X - h.X);
-                    }
-                    else
-                    {
-                        answer.RightEdge = x_0.Y;
-                        x_values.Insert(1, x_0.Y - h.Y);
-                    }
-                    h = -1*h;
-                    k = 2;                    
+                    answer.RightEdge = alpha;
+                    alphavalues.Insert(1, alpha - h);
+                    h = -h;
+                    k = 2;
+                    LoggerEvs.writeLog("Step 3: b=" + alpha.ToString("f4") + ", alpha1=" + (alpha - h).ToString("f4") + ", h=" + h.ToString("f4") + ", k=2.");
                 }
             }
             while (!searchEnd)
             {
                 // Шаг 4
-                x_values.Insert(k, 0);
-                if(!fixLeftEdge)
-                    x_values[k] = x_0.X + Math.Pow(2, k - 1) * h.X;
-                else
-                    x_values[k] = x_0.Y + Math.Pow(2, k - 1) * h.Y;
-
-                double tmpFunc1, tmpFunc2;
-                if (!fixLeftEdge)
-                {
-                    tmpFunc1 = countFunctionValue(new Vector2(x_values[k - 1], args.Y));
-                    tmpFunc2 = countFunctionValue(new Vector2(x_values[k], args.Y));
-                }
-                else
-                {
-                    tmpFunc1 = countFunctionValue(new Vector2(args.X, x_values[k - 1]));
-                    tmpFunc2 = countFunctionValue(new Vector2(args.X, x_values[k]));
-                }
-                
+                alphavalues.Insert(k, 0);
+                alphavalues[k] = alpha + Math.Pow(2, k - 1) * h;
+                LoggerEvs.writeLog("Step 4: alphak=" + alphavalues[k].ToString("f4"));
                 // Шаг 5
-                if (tmpFunc1 <= tmpFunc2)
+                if (taskFunction(args - alphavalues[k - 1] * gradient) <= taskFunction(args - alphavalues[k] * gradient))
                 {
-                    double toCompare;
-                    if (!fixLeftEdge)
-                        toCompare = h.X;
+                    if (h > 0)
+                    {
+                        answer.RightEdge = alphavalues[k];
+                        LoggerEvs.writeLog("Step 5: h > 0; b=alphak=" + answer.RightEdge.ToString("f4"));
+                    }
                     else
-                        toCompare = h.Y;
-                    if (toCompare > 0)
-                        answer.RightEdge = x_values[k];
-                    else
-                        answer.LeftEdge = x_values[k];
+                    {
+                        answer.LeftEdge = alphavalues[k];
+                        LoggerEvs.writeLog("Step 5: h < 0; a=alphak" + answer.LeftEdge.ToString("f4"));
+                    }
                     searchEnd = true;
                 }
                 else
                 {
-                    double toCompare;
-                    if (!fixLeftEdge)
-                        toCompare = h.X;
+                    if (h > 0)
+                    {
+                        answer.LeftEdge = alphavalues[k - 1];
+                        LoggerEvs.writeLog("Step 5: h > 0; a=alpha(k-1)=" + answer.LeftEdge.ToString("f4"));
+                    }
                     else
-                        toCompare = h.Y;
-                    if (toCompare > 0)
-                        answer.LeftEdge = x_values[k - 1];
-                    else
-                        answer.RightEdge = x_values[k - 1];
+                    {
+                        answer.RightEdge = alphavalues[k - 1];
+                        LoggerEvs.writeLog("Step 5: h > 0; b=alpha(k-1)=" + answer.RightEdge.ToString("f4"));
+                    }
+
                     // Перейти на шаг 4
                     k++;
+                    LoggerEvs.writeLog("k = k + 1 = " + k + "; Go to step 4!");
                 }
             }
-            // Шаг 6           
+            // Шаг 6
+            LoggerEvs.writeLog("Step 6: Interval is: [" + answer.LeftEdge.ToString("f4") + " ; " + answer.RightEdge.ToString("f4") + "]");
             return answer;
         }
     }

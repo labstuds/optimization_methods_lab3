@@ -21,14 +21,14 @@ namespace ThirdLabWork
             this.eps = eps;
         }
 
-        public Vector2 calculate()
+        public Vector2 calculate(Func<Vector2, double> taskFunction)
         {
             Vector2 grad;
             Vector2 s;
         step1:
             int k = 0;
         step2:
-            grad = CountCentralScheme.Instance.countDerivative(new Vector2(0.001f, 0.001f), basicX, OptimalGradientMethod.taskFunction);
+            grad = CountCentralScheme.Instance.countDerivative(0.001f, basicX, taskFunction);
         step3:
             if (grad.Length <= eps)
                 goto step12;
@@ -46,10 +46,10 @@ namespace ThirdLabWork
             return basicX;
         }
 
-        public Vector2 returnApproximateSolution(Vector2 x, double eps)
+        public Vector2 returnApproximateSolution(Vector2 x, double eps, Func<Vector2, double> taskFunction)
         {
             setStartingVariables(x, eps);
-            return calculate();
+            return calculate(taskFunction);
         }
     }
 }
