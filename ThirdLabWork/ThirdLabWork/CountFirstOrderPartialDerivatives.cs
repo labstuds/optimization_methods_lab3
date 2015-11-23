@@ -64,4 +64,15 @@ namespace ThirdLabWork
             return new Vector2(x1, x2);
         }
     }
+
+    class Gradient
+    {
+        public static Vector2 get(double alpha, Vector2 args, Func<Vector2, double> taskFunction)
+        {
+            if (alpha >= 0.01)
+               return CountCentralScheme.Instance.countDerivative(alpha, args, taskFunction);
+            else
+                return CountRightScheme.Instance.countDerivative(alpha, args, taskFunction);
+        }
+    }
 }

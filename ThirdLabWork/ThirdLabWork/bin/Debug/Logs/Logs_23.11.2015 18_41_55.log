@@ -1,0 +1,826 @@
+[23.11.2015 18:41:55] DFP method started
+[23.11.2015 18:41:55] Input data. Start point DenseVector 2-Double
+0
+0
+, epsilon 0,01000
+[23.11.2015 18:41:55] Step 1: K = 0
+[23.11.2015 18:41:55] Step 2: ITERATION number 0
+[23.11.2015 18:41:58] Step 4: K==0, go to step 8.
+[23.11.2015 18:41:58] Step 8: Search vector: DenseVector 2-Double
+14
+22
+
+[23.11.2015 18:41:58] DSK method started!
+[23.11.2015 18:41:58] Step 1: f(alpha)=169,7946, f(alpha + h)=169,0947; k=0;
+[23.11.2015 18:41:58] Step 2: a=0,0002, alpha1=0,0012, k=2; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,0022
+[23.11.2015 18:41:58] Step 5: h > 0; a=alpha(k-1)=0,0012
+[23.11.2015 18:41:58] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,0042
+[23.11.2015 18:41:58] Step 5: h > 0; a=alpha(k-1)=0,0022
+[23.11.2015 18:41:58] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,0082
+[23.11.2015 18:41:58] Step 5: h > 0; a=alpha(k-1)=0,0042
+[23.11.2015 18:41:58] k = k + 1 = 5; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,0162
+[23.11.2015 18:41:58] Step 5: h > 0; a=alpha(k-1)=0,0082
+[23.11.2015 18:41:58] k = k + 1 = 6; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,0322
+[23.11.2015 18:41:58] Step 5: h > 0; a=alpha(k-1)=0,0162
+[23.11.2015 18:41:58] k = k + 1 = 7; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,0642
+[23.11.2015 18:41:58] Step 5: h > 0; a=alpha(k-1)=0,0322
+[23.11.2015 18:41:58] k = k + 1 = 8; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,1282
+[23.11.2015 18:41:58] Step 5: h > 0; a=alpha(k-1)=0,0642
+[23.11.2015 18:41:58] k = k + 1 = 9; Go to step 4!
+[23.11.2015 18:41:58] Step 4: alphak=0,2562
+[23.11.2015 18:41:58] Step 5: h > 0; b=alphak=0,2562
+[23.11.2015 18:41:58] Step 6: Interval is: [0,0642 ; 0,2562]
+[23.11.2015 18:41:58] Dichotomy method has been started!
+[23.11.2015 18:41:58] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:41:58] Step 1: counting alpha_1 = 0,1601, alpha_2 = 0,1603
+[23.11.2015 18:41:58] Step 3: f(0,1601) = 66,0630 <= f(0,1603) = 66,5135; b = alpha_2 = 0,1603.
+[23.11.2015 18:41:58] Iter 0: Answer is in the range: [0,0642; 0,1603]
+[23.11.2015 18:41:58] Step 1: counting alpha_1 = 0,1121, alpha_2 = 0,1123
+[23.11.2015 18:41:58] Step 3: f(0,1121) = 36,7709 > f(0,1123) = 36,6471; a = alpha_1 = 0,1121.
+[23.11.2015 18:41:58] Iter 1: Answer is in the range: [0,1121; 0,1603]
+[23.11.2015 18:41:58] Step 1: counting alpha_1 = 0,1361, alpha_2 = 0,1363
+[23.11.2015 18:41:58] Step 3: f(0,1361) = 34,3295 <= f(0,1363) = 34,4329; b = alpha_2 = 0,1363.
+[23.11.2015 18:41:58] Iter 2: Answer is in the range: [0,1121; 0,1363]
+[23.11.2015 18:41:58] Step 1: counting alpha_1 = 0,1241, alpha_2 = 0,1243
+[23.11.2015 18:41:58] Step 3: f(0,1241) = 32,1584 > f(0,1243) = 32,1344; a = alpha_1 = 0,1241.
+[23.11.2015 18:41:58] Iter 3: Answer is in the range: [0,1241; 0,1363]
+[23.11.2015 18:41:58] Step 1: counting alpha_1 = 0,1301, alpha_2 = 0,1303
+[23.11.2015 18:41:58] Step 3: f(0,1301) = 32,2914 <= f(0,1303) = 32,3274; b = alpha_2 = 0,1303.
+[23.11.2015 18:41:58] Iter 4: Answer is in the range: [0,1241; 0,1303]
+[23.11.2015 18:41:58] Step 1: counting alpha_1 = 0,1271, alpha_2 = 0,1273
+[23.11.2015 18:41:58] Step 3: f(0,1271) = 32,0002 <= f(0,1273) = 32,0053; b = alpha_2 = 0,1273.
+[23.11.2015 18:41:58] Iter 5: Answer is in the range: [0,1241; 0,1273]
+[23.11.2015 18:41:58] Step 1: counting alpha_1 = 0,1256, alpha_2 = 0,1258
+[23.11.2015 18:41:58] Step 3: f(0,1256) = 32,0247 > f(0,1258) = 32,0151; a = alpha_1 = 0,1256.
+[23.11.2015 18:41:58] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:41:58] Iter 6: Answer is in the range: [0,1256; 0,1273]
+[23.11.2015 18:41:58] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,1264
+[23.11.2015 18:41:58] Step 9: New alpha 0,126435156257125
+[23.11.2015 18:41:58] Step 10: New local search point DenseVector 2-Double
+1,77009
+2,78157
+
+[23.11.2015 18:41:58] Step 11: Iteration end.
+[23.11.2015 18:41:58] Step 2: ITERATION number 1
+[23.11.2015 18:41:59] Step 5: Sk = DenseVector 2-Double
+1,77009
+2,78157
+
+[23.11.2015 18:41:59] Step 6: Yk = DenseVector 2-Double
+-14,3092
+  41,412
+
+[23.11.2015 18:41:59] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+0,928209   0,36347
+ 0,36347  0,192759
+
+[23.11.2015 18:41:59] Step 8: Search vector: DenseVector 2-Double
+22,2805
+7,82846
+
+[23.11.2015 18:41:59] DSK method started!
+[23.11.2015 18:41:59] Step 1: f(alpha)=1009166,5566, f(alpha + h)=1047658,6909; k=0;
+[23.11.2015 18:41:59] Step 3: b=0,1264, alpha1=0,1274, h=-0,0010, k=2.
+[23.11.2015 18:41:59] Step 4: alphak=0,1244
+[23.11.2015 18:41:59] Step 5: h > 0; b=alpha(k-1)=0,1254
+[23.11.2015 18:41:59] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:41:59] Step 4: alphak=0,1224
+[23.11.2015 18:41:59] Step 5: h > 0; b=alpha(k-1)=0,1244
+[23.11.2015 18:41:59] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:41:59] Step 4: alphak=0,1184
+[23.11.2015 18:41:59] Step 5: h > 0; b=alpha(k-1)=0,1224
+[23.11.2015 18:41:59] k = k + 1 = 5; Go to step 4!
+[23.11.2015 18:41:59] Step 4: alphak=0,1104
+[23.11.2015 18:41:59] Step 5: h > 0; b=alpha(k-1)=0,1184
+[23.11.2015 18:41:59] k = k + 1 = 6; Go to step 4!
+[23.11.2015 18:41:59] Step 4: alphak=0,0944
+[23.11.2015 18:41:59] Step 5: h > 0; b=alpha(k-1)=0,1104
+[23.11.2015 18:41:59] k = k + 1 = 7; Go to step 4!
+[23.11.2015 18:41:59] Step 4: alphak=0,0624
+[23.11.2015 18:41:59] Step 5: h > 0; b=alpha(k-1)=0,0944
+[23.11.2015 18:41:59] k = k + 1 = 8; Go to step 4!
+[23.11.2015 18:41:59] Step 4: alphak=-0,0016
+[23.11.2015 18:41:59] Step 5: h > 0; b=alpha(k-1)=0,0624
+[23.11.2015 18:41:59] k = k + 1 = 9; Go to step 4!
+[23.11.2015 18:41:59] Step 4: alphak=-0,1296
+[23.11.2015 18:41:59] Step 5: h < 0; a=alphak-0,1296
+[23.11.2015 18:41:59] Step 6: Interval is: [-0,1296 ; 0,0624]
+[23.11.2015 18:41:59] Dichotomy method has been started!
+[23.11.2015 18:41:59] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:41:59] Step 1: counting alpha_1 = -0,0337, alpha_2 = -0,0335
+[23.11.2015 18:41:59] Step 3: f(-0,0337) = 52145,5368 > f(-0,0335) = 51310,3912; a = alpha_1 = -0,0337.
+[23.11.2015 18:41:59] Iter 0: Answer is in the range: [-0,0337; 0,0624]
+[23.11.2015 18:41:59] Step 1: counting alpha_1 = 0,0143, alpha_2 = 0,0145
+[23.11.2015 18:41:59] Step 3: f(0,0143) = 127,8285 <= f(0,0145) = 131,3489; b = alpha_2 = 0,0145.
+[23.11.2015 18:41:59] Iter 1: Answer is in the range: [-0,0337; 0,0145]
+[23.11.2015 18:41:59] Step 1: counting alpha_1 = -0,0097, alpha_2 = -0,0095
+[23.11.2015 18:41:59] Step 3: f(-0,0097) = 3394,7560 > f(-0,0095) = 3279,8414; a = alpha_1 = -0,0097.
+[23.11.2015 18:41:59] Iter 2: Answer is in the range: [-0,0097; 0,0145]
+[23.11.2015 18:41:59] Step 1: counting alpha_1 = 0,0023, alpha_2 = 0,0025
+[23.11.2015 18:41:59] Step 3: f(0,0023) = 123,7722 > f(0,0025) = 111,4855; a = alpha_1 = 0,0023.
+[23.11.2015 18:41:59] Iter 3: Answer is in the range: [0,0023; 0,0145]
+[23.11.2015 18:41:59] Step 1: counting alpha_1 = 0,0083, alpha_2 = 0,0085
+[23.11.2015 18:41:59] Step 3: f(0,0083) = 13,8535 <= f(0,0085) = 16,3463; b = alpha_2 = 0,0085.
+[23.11.2015 18:41:59] Iter 4: Answer is in the range: [0,0023; 0,0085]
+[23.11.2015 18:41:59] Step 1: counting alpha_1 = 0,0053, alpha_2 = 0,0055
+[23.11.2015 18:41:59] Step 3: f(0,0053) = 12,9578 > f(0,0055) = 10,2769; a = alpha_1 = 0,0053.
+[23.11.2015 18:41:59] Iter 5: Answer is in the range: [0,0053; 0,0085]
+[23.11.2015 18:41:59] Step 1: counting alpha_1 = 0,0068, alpha_2 = 0,0070
+[23.11.2015 18:41:59] Step 3: f(0,0068) = 3,5073 <= f(0,0070) = 3,9052; b = alpha_2 = 0,0070.
+[23.11.2015 18:41:59] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:41:59] Iter 6: Answer is in the range: [0,0053; 0,0070]
+[23.11.2015 18:41:59] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0061
+[23.11.2015 18:41:59] Step 9: New alpha 0,00614375000712459
+[23.11.2015 18:41:59] Step 10: New local search point DenseVector 2-Double
+1,90698
+2,82967
+
+[23.11.2015 18:41:59] Step 11: Iteration end.
+[23.11.2015 18:41:59] Step 2: ITERATION number 2
+[23.11.2015 18:42:00] Step 5: Sk = DenseVector 2-Double
+ 0,136886
+0,0480961
+
+[23.11.2015 18:42:00] Step 6: Yk = DenseVector 2-Double
+ 2,2146
+5,96186
+
+[23.11.2015 18:42:00] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+  0,83872  0,0482092
+0,0482092  -0,682067
+
+[23.11.2015 18:42:00] Step 8: Search vector: DenseVector 2-Double
+22,9645
+17,6981
+
+[23.11.2015 18:42:00] DSK method started!
+[23.11.2015 18:42:00] Step 1: f(alpha)=18,6496, f(alpha + h)=17,3154; k=0;
+[23.11.2015 18:42:00] Step 2: a=0,0061, alpha1=0,0071, k=2; Go to step 4!
+[23.11.2015 18:42:00] Step 4: alphak=0,0081
+[23.11.2015 18:42:00] Step 5: h > 0; a=alpha(k-1)=0,0071
+[23.11.2015 18:42:00] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:00] Step 4: alphak=0,0101
+[23.11.2015 18:42:00] Step 5: h > 0; a=alpha(k-1)=0,0081
+[23.11.2015 18:42:00] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:00] Step 4: alphak=0,0141
+[23.11.2015 18:42:00] Step 5: h > 0; a=alpha(k-1)=0,0101
+[23.11.2015 18:42:00] k = k + 1 = 5; Go to step 4!
+[23.11.2015 18:42:00] Step 4: alphak=0,0221
+[23.11.2015 18:42:00] Step 5: h > 0; a=alpha(k-1)=0,0141
+[23.11.2015 18:42:00] k = k + 1 = 6; Go to step 4!
+[23.11.2015 18:42:00] Step 4: alphak=0,0381
+[23.11.2015 18:42:00] Step 5: h > 0; a=alpha(k-1)=0,0221
+[23.11.2015 18:42:00] k = k + 1 = 7; Go to step 4!
+[23.11.2015 18:42:00] Step 4: alphak=0,0701
+[23.11.2015 18:42:00] Step 5: h > 0; b=alphak=0,0701
+[23.11.2015 18:42:00] Step 6: Interval is: [0,0221 ; 0,0701]
+[23.11.2015 18:42:00] Dichotomy method has been started!
+[23.11.2015 18:42:00] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:00] Step 1: counting alpha_1 = 0,0460, alpha_2 = 0,0462
+[23.11.2015 18:42:00] Step 3: f(0,0460) = 4,6831 <= f(0,0462) = 4,7579; b = alpha_2 = 0,0462.
+[23.11.2015 18:42:00] Iter 0: Answer is in the range: [0,0221; 0,0462]
+[23.11.2015 18:42:00] Step 1: counting alpha_1 = 0,0341, alpha_2 = 0,0343
+[23.11.2015 18:42:00] Step 3: f(0,0341) = 2,2965 <= f(0,0343) = 2,3006; b = alpha_2 = 0,0343.
+[23.11.2015 18:42:00] Iter 1: Answer is in the range: [0,0221; 0,0343]
+[23.11.2015 18:42:00] Step 1: counting alpha_1 = 0,0281, alpha_2 = 0,0283
+[23.11.2015 18:42:00] Step 3: f(0,0281) = 2,8143 > f(0,0283) = 2,7759; a = alpha_1 = 0,0281.
+[23.11.2015 18:42:00] Iter 2: Answer is in the range: [0,0281; 0,0343]
+[23.11.2015 18:42:00] Step 1: counting alpha_1 = 0,0311, alpha_2 = 0,0313
+[23.11.2015 18:42:00] Step 3: f(0,0311) = 2,3969 > f(0,0313) = 2,3805; a = alpha_1 = 0,0311.
+[23.11.2015 18:42:00] Iter 3: Answer is in the range: [0,0311; 0,0343]
+[23.11.2015 18:42:00] Step 1: counting alpha_1 = 0,0326, alpha_2 = 0,0328
+[23.11.2015 18:42:00] Step 3: f(0,0326) = 2,3085 > f(0,0328) = 2,3026; a = alpha_1 = 0,0326.
+[23.11.2015 18:42:00] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:00] Iter 4: Answer is in the range: [0,0326; 0,0343]
+[23.11.2015 18:42:00] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0334
+[23.11.2015 18:42:00] Step 9: New alpha 0,0334468750071246
+[23.11.2015 18:42:00] Step 10: New local search point DenseVector 2-Double
+2,67507
+3,42162
+
+[23.11.2015 18:42:00] Step 11: Iteration end.
+[23.11.2015 18:42:00] Step 2: ITERATION number 3
+[23.11.2015 18:42:01] Step 5: Sk = DenseVector 2-Double
+0,768092
+0,591945
+
+[23.11.2015 18:42:01] Step 6: Yk = DenseVector 2-Double
+38,7783
+74,9721
+
+[23.11.2015 18:42:01] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+-0,0242442  -0,338762
+ -0,338762  -0,854774
+
+[23.11.2015 18:42:01] Step 8: Search vector: DenseVector 2-Double
+34,1923
+89,1198
+
+[23.11.2015 18:42:01] DSK method started!
+[23.11.2015 18:42:01] Step 1: f(alpha)=489839,3699, f(alpha + h)=567400,6538; k=0;
+[23.11.2015 18:42:01] Step 3: b=0,0334, alpha1=0,0344, h=-0,0010, k=2.
+[23.11.2015 18:42:01] Step 4: alphak=0,0314
+[23.11.2015 18:42:01] Step 5: h > 0; b=alpha(k-1)=0,0324
+[23.11.2015 18:42:01] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=0,0294
+[23.11.2015 18:42:01] Step 5: h > 0; b=alpha(k-1)=0,0314
+[23.11.2015 18:42:01] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=0,0254
+[23.11.2015 18:42:01] Step 5: h > 0; b=alpha(k-1)=0,0294
+[23.11.2015 18:42:01] k = k + 1 = 5; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=0,0174
+[23.11.2015 18:42:01] Step 5: h > 0; b=alpha(k-1)=0,0254
+[23.11.2015 18:42:01] k = k + 1 = 6; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=0,0014
+[23.11.2015 18:42:01] Step 5: h > 0; b=alpha(k-1)=0,0174
+[23.11.2015 18:42:01] k = k + 1 = 7; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=-0,0306
+[23.11.2015 18:42:01] Step 5: h < 0; a=alphak-0,0306
+[23.11.2015 18:42:01] Step 6: Interval is: [-0,0306 ; 0,0174]
+[23.11.2015 18:42:01] Dichotomy method has been started!
+[23.11.2015 18:42:01] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:01] Step 1: counting alpha_1 = -0,0067, alpha_2 = -0,0065
+[23.11.2015 18:42:01] Step 3: f(-0,0067) = 28732,8959 > f(-0,0065) = 27005,1328; a = alpha_1 = -0,0067.
+[23.11.2015 18:42:01] Iter 0: Answer is in the range: [-0,0067; 0,0174]
+[23.11.2015 18:42:01] Step 1: counting alpha_1 = 0,0053, alpha_2 = 0,0055
+[23.11.2015 18:42:01] Step 3: f(0,0053) = 18,2706 <= f(0,0055) = 24,1304; b = alpha_2 = 0,0055.
+[23.11.2015 18:42:01] Iter 1: Answer is in the range: [-0,0067; 0,0055]
+[23.11.2015 18:42:01] Step 1: counting alpha_1 = -0,0007, alpha_2 = -0,0005
+[23.11.2015 18:42:01] Step 3: f(-0,0007) = 2349,1482 > f(-0,0005) = 2080,6817; a = alpha_1 = -0,0007.
+[23.11.2015 18:42:01] Iter 2: Answer is in the range: [-0,0007; 0,0055]
+[23.11.2015 18:42:01] Step 1: counting alpha_1 = 0,0023, alpha_2 = 0,0025
+[23.11.2015 18:42:01] Step 3: f(0,0023) = 191,6752 > f(0,0025) = 147,2796; a = alpha_1 = 0,0023.
+[23.11.2015 18:42:01] Iter 3: Answer is in the range: [0,0023; 0,0055]
+[23.11.2015 18:42:01] Step 1: counting alpha_1 = 0,0038, alpha_2 = 0,0040
+[23.11.2015 18:42:01] Step 3: f(0,0038) = 8,7762 > f(0,0040) = 3,5835; a = alpha_1 = 0,0038.
+[23.11.2015 18:42:01] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:01] Iter 4: Answer is in the range: [0,0038; 0,0055]
+[23.11.2015 18:42:01] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0047
+[23.11.2015 18:42:01] Step 9: New alpha 0,00465000000712459
+[23.11.2015 18:42:01] Step 10: New local search point DenseVector 2-Double
+2,83406
+3,83602
+
+[23.11.2015 18:42:01] Step 11: Iteration end.
+[23.11.2015 18:42:01] Step 2: ITERATION number 4
+[23.11.2015 18:42:01] Step 5: Sk = DenseVector 2-Double
+0,158994
+0,414407
+
+[23.11.2015 18:42:01] Step 6: Yk = DenseVector 2-Double
+20,5581
+63,1156
+
+[23.11.2015 18:42:01] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+ 0,160522  -0,717823
+-0,717823  -0,058376
+
+[23.11.2015 18:42:01] Step 8: Search vector: DenseVector 2-Double
+112,472
+31,7581
+
+[23.11.2015 18:42:01] DSK method started!
+[23.11.2015 18:42:01] Step 1: f(alpha)=27,9447, f(alpha + h)=15,5135; k=0;
+[23.11.2015 18:42:01] Step 2: a=0,0047, alpha1=0,0057, k=2; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=0,0067
+[23.11.2015 18:42:01] Step 5: h > 0; a=alpha(k-1)=0,0057
+[23.11.2015 18:42:01] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=0,0087
+[23.11.2015 18:42:01] Step 5: h > 0; a=alpha(k-1)=0,0067
+[23.11.2015 18:42:01] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:01] Step 4: alphak=0,0127
+[23.11.2015 18:42:01] Step 5: h > 0; b=alphak=0,0127
+[23.11.2015 18:42:01] Step 6: Interval is: [0,0067 ; 0,0127]
+[23.11.2015 18:42:01] Dichotomy method has been started!
+[23.11.2015 18:42:01] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:01] Step 1: counting alpha_1 = 0,0096, alpha_2 = 0,0098
+[23.11.2015 18:42:01] Step 3: f(0,0096) = 5,4087 <= f(0,0098) = 6,1240; b = alpha_2 = 0,0098.
+[23.11.2015 18:42:01] Iter 0: Answer is in the range: [0,0067; 0,0098]
+[23.11.2015 18:42:01] Step 1: counting alpha_1 = 0,0081, alpha_2 = 0,0083
+[23.11.2015 18:42:01] Step 3: f(0,0081) = 3,2778 > f(0,0083) = 3,2205; a = alpha_1 = 0,0081.
+[23.11.2015 18:42:01] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:01] Iter 1: Answer is in the range: [0,0081; 0,0098]
+[23.11.2015 18:42:01] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0089
+[23.11.2015 18:42:01] Step 9: New alpha 0,0089250000071246
+[23.11.2015 18:42:01] Step 10: New local search point DenseVector 2-Double
+3,83787
+4,11946
+
+[23.11.2015 18:42:01] Step 11: Iteration end.
+[23.11.2015 18:42:01] Step 2: ITERATION number 5
+[23.11.2015 18:42:02] Step 5: Sk = DenseVector 2-Double
+ 1,00381
+0,283441
+
+[23.11.2015 18:42:02] Step 6: Yk = DenseVector 2-Double
+116,856
+78,8951
+
+[23.11.2015 18:42:02] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+0,241177  -0,44989
+-0,44989    0,9049
+
+[23.11.2015 18:42:02] Step 8: Search vector: DenseVector 2-Double
+73,7034
+-153,46
+
+[23.11.2015 18:42:02] DSK method started!
+[23.11.2015 18:42:02] Step 1: f(alpha)=7,8605, f(alpha + h)=16,2469; k=0;
+[23.11.2015 18:42:02] Step 3: b=0,0089, alpha1=0,0099, h=-0,0010, k=2.
+[23.11.2015 18:42:02] Step 4: alphak=0,0069
+[23.11.2015 18:42:02] Step 5: h > 0; b=alpha(k-1)=0,0079
+[23.11.2015 18:42:02] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:02] Step 4: alphak=0,0049
+[23.11.2015 18:42:02] Step 5: h < 0; a=alphak0,0049
+[23.11.2015 18:42:02] Step 6: Interval is: [0,0049 ; 0,0079]
+[23.11.2015 18:42:02] Dichotomy method has been started!
+[23.11.2015 18:42:02] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:02] Step 1: counting alpha_1 = 0,0063, alpha_2 = 0,0065
+[23.11.2015 18:42:02] Step 3: f(0,0063) = 1,7133 > f(0,0065) = 1,1563; a = alpha_1 = 0,0063.
+[23.11.2015 18:42:02] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:02] Iter 0: Answer is in the range: [0,0063; 0,0079]
+[23.11.2015 18:42:02] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0071
+[23.11.2015 18:42:02] Step 9: New alpha 0,00712500000712459
+[23.11.2015 18:42:02] Step 10: New local search point DenseVector 2-Double
+4,36301
+3,02606
+
+[23.11.2015 18:42:02] Step 11: Iteration end.
+[23.11.2015 18:42:02] Step 2: ITERATION number 6
+[23.11.2015 18:42:02] Step 5: Sk = DenseVector 2-Double
+0,525137
+ -1,0934
+
+[23.11.2015 18:42:02] Step 6: Yk = DenseVector 2-Double
+ 57,4484
+-142,865
+
+[23.11.2015 18:42:02] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+-0,880728  -0,12233
+ -0,12233  0,813998
+
+[23.11.2015 18:42:02] Step 8: Search vector: DenseVector 2-Double
+ 193,873
+-57,0386
+
+[23.11.2015 18:42:02] DSK method started!
+[23.11.2015 18:42:02] Step 1: f(alpha)=45,7496, f(alpha + h)=74,7053; k=0;
+[23.11.2015 18:42:02] Step 3: b=0,0071, alpha1=0,0081, h=-0,0010, k=2.
+[23.11.2015 18:42:02] Step 4: alphak=0,0051
+[23.11.2015 18:42:02] Step 5: h > 0; b=alpha(k-1)=0,0061
+[23.11.2015 18:42:02] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:02] Step 4: alphak=0,0031
+[23.11.2015 18:42:02] Step 5: h < 0; a=alphak0,0031
+[23.11.2015 18:42:02] Step 6: Interval is: [0,0031 ; 0,0061]
+[23.11.2015 18:42:02] Dichotomy method has been started!
+[23.11.2015 18:42:02] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:02] Step 1: counting alpha_1 = 0,0045, alpha_2 = 0,0047
+[23.11.2015 18:42:02] Step 3: f(0,0045) = 1,3652 > f(0,0047) = 0,2687; a = alpha_1 = 0,0045.
+[23.11.2015 18:42:02] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:02] Iter 0: Answer is in the range: [0,0045; 0,0061]
+[23.11.2015 18:42:02] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0053
+[23.11.2015 18:42:02] Step 9: New alpha 0,00532500000712459
+[23.11.2015 18:42:02] Step 10: New local search point DenseVector 2-Double
+5,39538
+2,72233
+
+[23.11.2015 18:42:02] Step 11: Iteration end.
+[23.11.2015 18:42:02] Step 2: ITERATION number 7
+[23.11.2015 18:42:02] Step 5: Sk = DenseVector 2-Double
+ 1,03237
+-0,30373
+
+[23.11.2015 18:42:02] Step 6: Yk = DenseVector 2-Double
+254,588
+3,57923
+
+[23.11.2015 18:42:02] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+-1,11782    0,325389
+0,325389  -0,0212926
+
+[23.11.2015 18:42:02] Step 8: Search vector: DenseVector 2-Double
+ 481,419
+-147,839
+
+[23.11.2015 18:42:02] DSK method started!
+[23.11.2015 18:42:02] Step 1: f(alpha)=114,8335, f(alpha + h)=81,5246; k=0;
+[23.11.2015 18:42:02] Step 2: a=0,0053, alpha1=0,0063, k=2; Go to step 4!
+[23.11.2015 18:42:02] Step 4: alphak=0,0073
+[23.11.2015 18:42:02] Step 5: h > 0; b=alphak=0,0073
+[23.11.2015 18:42:03] Step 6: Interval is: [0,0053 ; 0,0073]
+[23.11.2015 18:42:03] Dichotomy method has been started!
+[23.11.2015 18:42:03] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,0062, alpha_2 = 0,0064
+[23.11.2015 18:42:03] Step 3: f(0,0062) = 80,5331 <= f(0,0064) = 84,6538; b = alpha_2 = 0,0064.
+[23.11.2015 18:42:03] Step 4: (b-a)/2 = 0,0006 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:03] Iter 0: Answer is in the range: [0,0053; 0,0064]
+[23.11.2015 18:42:03] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0059
+[23.11.2015 18:42:03] Step 9: New alpha 0,00587500000712459
+[23.11.2015 18:42:03] Step 10: New local search point DenseVector 2-Double
+8,22372
+1,85378
+
+[23.11.2015 18:42:03] Step 11: Iteration end.
+[23.11.2015 18:42:03] Step 2: ITERATION number 8
+[23.11.2015 18:42:03] Step 5: Sk = DenseVector 2-Double
+  2,82834
+-0,868555
+
+[23.11.2015 18:42:03] Step 6: Yk = DenseVector 2-Double
+1470,98
+46,3804
+
+[23.11.2015 18:42:03] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+-0,23433    0,421125
+0,421125  -0,0105826
+
+[23.11.2015 18:42:03] Step 8: Search vector: DenseVector 2-Double
+ 389,178
+-812,483
+
+[23.11.2015 18:42:03] DSK method started!
+[23.11.2015 18:42:03] Step 1: f(alpha)=28118,7345, f(alpha + h)=86652,5827; k=0;
+[23.11.2015 18:42:03] Step 3: b=0,0059, alpha1=0,0069, h=-0,0010, k=2.
+[23.11.2015 18:42:03] Step 4: alphak=0,0039
+[23.11.2015 18:42:03] Step 5: h > 0; b=alpha(k-1)=0,0049
+[23.11.2015 18:42:03] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0019
+[23.11.2015 18:42:03] Step 5: h > 0; b=alpha(k-1)=0,0039
+[23.11.2015 18:42:03] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=-0,0021
+[23.11.2015 18:42:03] Step 5: h < 0; a=alphak-0,0021
+[23.11.2015 18:42:03] Step 6: Interval is: [-0,0021 ; 0,0039]
+[23.11.2015 18:42:03] Dichotomy method has been started!
+[23.11.2015 18:42:03] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,0008, alpha_2 = 0,0010
+[23.11.2015 18:42:03] Step 3: f(0,0008) = 1683,2083 > f(0,0010) = 891,3316; a = alpha_1 = 0,0008.
+[23.11.2015 18:42:03] Iter 0: Answer is in the range: [0,0008; 0,0039]
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,0022, alpha_2 = 0,0024
+[23.11.2015 18:42:03] Step 3: f(0,0022) = 157,3746 <= f(0,0024) = 195,3979; b = alpha_2 = 0,0024.
+[23.11.2015 18:42:03] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:03] Iter 1: Answer is in the range: [0,0008; 0,0024]
+[23.11.2015 18:42:03] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0016
+[23.11.2015 18:42:03] Step 9: New alpha 0,00160000000712459
+[23.11.2015 18:42:03] Step 10: New local search point DenseVector 2-Double
+  8,8464
+0,553804
+
+[23.11.2015 18:42:03] Step 11: Iteration end.
+[23.11.2015 18:42:03] Step 2: ITERATION number 9
+[23.11.2015 18:42:03] Step 5: Sk = DenseVector 2-Double
+0,622685
+-1,29997
+
+[23.11.2015 18:42:03] Step 6: Yk = DenseVector 2-Double
+ 470,156
+-11,1662
+
+[23.11.2015 18:42:03] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+ 0,884792  0,0948221
+0,0948221  0,0886331
+
+[23.11.2015 18:42:03] Step 8: Search vector: DenseVector 2-Double
+-2140,26
+-240,387
+
+[23.11.2015 18:42:03] DSK method started!
+[23.11.2015 18:42:03] Step 1: f(alpha)=148,5065, f(alpha + h)=75,4871; k=0;
+[23.11.2015 18:42:03] Step 2: a=0,0016, alpha1=0,0026, k=2; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0036
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0026
+[23.11.2015 18:42:03] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0056
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0036
+[23.11.2015 18:42:03] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0096
+[23.11.2015 18:42:03] Step 5: h > 0; b=alphak=0,0096
+[23.11.2015 18:42:03] Step 6: Interval is: [0,0036 ; 0,0096]
+[23.11.2015 18:42:03] Dichotomy method has been started!
+[23.11.2015 18:42:03] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,0065, alpha_2 = 0,0067
+[23.11.2015 18:42:03] Step 3: f(0,0065) = 26,9238 <= f(0,0067) = 30,5851; b = alpha_2 = 0,0067.
+[23.11.2015 18:42:03] Iter 0: Answer is in the range: [0,0036; 0,0067]
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,0051, alpha_2 = 0,0053
+[23.11.2015 18:42:03] Step 3: f(0,0051) = 13,2597 <= f(0,0053) = 13,5096; b = alpha_2 = 0,0053.
+[23.11.2015 18:42:03] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:03] Iter 1: Answer is in the range: [0,0036; 0,0053]
+[23.11.2015 18:42:03] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0044
+[23.11.2015 18:42:03] Step 9: New alpha 0,00442500000712459
+[23.11.2015 18:42:03] Step 10: New local search point DenseVector 2-Double
+-0,624264
+-0,509907
+
+[23.11.2015 18:42:03] Step 11: Iteration end.
+[23.11.2015 18:42:03] Step 2: ITERATION number 10
+[23.11.2015 18:42:03] Step 5: Sk = DenseVector 2-Double
+-9,47067
+-1,06371
+
+[23.11.2015 18:42:03] Step 6: Yk = DenseVector 2-Double
+-2392,85
+-147,644
+
+[23.11.2015 18:42:03] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+   1,1267  -0,385015
+-0,385015    1,05796
+
+[23.11.2015 18:42:03] Step 8: Search vector: DenseVector 2-Double
+-17,4712
+ 12,6588
+
+[23.11.2015 18:42:03] DSK method started!
+[23.11.2015 18:42:03] Step 1: f(alpha)=174,8382, f(alpha + h)=174,4719; k=0;
+[23.11.2015 18:42:03] Step 2: a=0,0044, alpha1=0,0054, k=2; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0064
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0054
+[23.11.2015 18:42:03] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0084
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0064
+[23.11.2015 18:42:03] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0124
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0084
+[23.11.2015 18:42:03] k = k + 1 = 5; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0204
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0124
+[23.11.2015 18:42:03] k = k + 1 = 6; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0364
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0204
+[23.11.2015 18:42:03] k = k + 1 = 7; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,0684
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0364
+[23.11.2015 18:42:03] k = k + 1 = 8; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,1324
+[23.11.2015 18:42:03] Step 5: h > 0; a=alpha(k-1)=0,0684
+[23.11.2015 18:42:03] k = k + 1 = 9; Go to step 4!
+[23.11.2015 18:42:03] Step 4: alphak=0,2604
+[23.11.2015 18:42:03] Step 5: h > 0; b=alphak=0,2604
+[23.11.2015 18:42:03] Step 6: Interval is: [0,0684 ; 0,2604]
+[23.11.2015 18:42:03] Dichotomy method has been started!
+[23.11.2015 18:42:03] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,1643, alpha_2 = 0,1645
+[23.11.2015 18:42:03] Step 3: f(0,1643) = 90,0750 <= f(0,1645) = 90,1117; b = alpha_2 = 0,1645.
+[23.11.2015 18:42:03] Iter 0: Answer is in the range: [0,0684; 0,1645]
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,1164, alpha_2 = 0,1166
+[23.11.2015 18:42:03] Step 3: f(0,1164) = 102,3944 > f(0,1166) = 102,2783; a = alpha_1 = 0,1164.
+[23.11.2015 18:42:03] Iter 1: Answer is in the range: [0,1164; 0,1645]
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,1404, alpha_2 = 0,1406
+[23.11.2015 18:42:03] Step 3: f(0,1404) = 91,6857 > f(0,1406) = 91,6289; a = alpha_1 = 0,1404.
+[23.11.2015 18:42:03] Iter 2: Answer is in the range: [0,1404; 0,1645]
+[23.11.2015 18:42:03] Step 1: counting alpha_1 = 0,1523, alpha_2 = 0,1525
+[23.11.2015 18:42:03] Step 3: f(0,1523) = 89,4840 > f(0,1525) = 89,4695; a = alpha_1 = 0,1523.
+[23.11.2015 18:42:03] Iter 3: Answer is in the range: [0,1523; 0,1645]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,1583, alpha_2 = 0,1585
+[23.11.2015 18:42:04] Step 3: f(0,1583) = 89,3963 <= f(0,1585) = 89,4062; b = alpha_2 = 0,1585.
+[23.11.2015 18:42:04] Iter 4: Answer is in the range: [0,1523; 0,1585]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,1553, alpha_2 = 0,1555
+[23.11.2015 18:42:04] Step 3: f(0,1553) = 89,3487 > f(0,1555) = 89,3461; a = alpha_1 = 0,1553.
+[23.11.2015 18:42:04] Iter 5: Answer is in the range: [0,1553; 0,1585]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,1568, alpha_2 = 0,1570
+[23.11.2015 18:42:04] Step 3: f(0,1568) = 89,3491 <= f(0,1570) = 89,3526; b = alpha_2 = 0,1570.
+[23.11.2015 18:42:04] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:04] Iter 6: Answer is in the range: [0,1553; 0,1570]
+[23.11.2015 18:42:04] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,1562
+[23.11.2015 18:42:04] Step 9: New alpha 0,156183593757125
+[23.11.2015 18:42:04] Step 10: New local search point DenseVector 2-Double
+-3,35298
+ 1,46719
+
+[23.11.2015 18:42:04] Step 11: Iteration end.
+[23.11.2015 18:42:04] Step 2: ITERATION number 11
+[23.11.2015 18:42:04] Step 5: Sk = DenseVector 2-Double
+-2,72871
+  1,9771
+
+[23.11.2015 18:42:04] Step 6: Yk = DenseVector 2-Double
+-49,3201
+ -35,423
+
+[23.11.2015 18:42:04] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+ 0,390844  -0,610168
+-0,610168    1,09497
+
+[23.11.2015 18:42:04] Step 8: Search vector: DenseVector 2-Double
+-11,8527
+ 24,8652
+
+[23.11.2015 18:42:04] DSK method started!
+[23.11.2015 18:42:04] Step 1: f(alpha)=22319207,2637, f(alpha + h)=22951178,6448; k=0;
+[23.11.2015 18:42:04] Step 3: b=0,1562, alpha1=0,1572, h=-0,0010, k=2.
+[23.11.2015 18:42:04] Step 4: alphak=0,1542
+[23.11.2015 18:42:04] Step 5: h > 0; b=alpha(k-1)=0,1552
+[23.11.2015 18:42:04] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:04] Step 4: alphak=0,1522
+[23.11.2015 18:42:04] Step 5: h > 0; b=alpha(k-1)=0,1542
+[23.11.2015 18:42:04] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:04] Step 4: alphak=0,1482
+[23.11.2015 18:42:04] Step 5: h > 0; b=alpha(k-1)=0,1522
+[23.11.2015 18:42:04] k = k + 1 = 5; Go to step 4!
+[23.11.2015 18:42:04] Step 4: alphak=0,1402
+[23.11.2015 18:42:04] Step 5: h > 0; b=alpha(k-1)=0,1482
+[23.11.2015 18:42:04] k = k + 1 = 6; Go to step 4!
+[23.11.2015 18:42:04] Step 4: alphak=0,1242
+[23.11.2015 18:42:04] Step 5: h > 0; b=alpha(k-1)=0,1402
+[23.11.2015 18:42:04] k = k + 1 = 7; Go to step 4!
+[23.11.2015 18:42:04] Step 4: alphak=0,0922
+[23.11.2015 18:42:04] Step 5: h > 0; b=alpha(k-1)=0,1242
+[23.11.2015 18:42:04] k = k + 1 = 8; Go to step 4!
+[23.11.2015 18:42:04] Step 4: alphak=0,0282
+[23.11.2015 18:42:04] Step 5: h > 0; b=alpha(k-1)=0,0922
+[23.11.2015 18:42:04] k = k + 1 = 9; Go to step 4!
+[23.11.2015 18:42:04] Step 4: alphak=-0,0998
+[23.11.2015 18:42:04] Step 5: h < 0; a=alphak-0,0998
+[23.11.2015 18:42:04] Step 6: Interval is: [-0,0998 ; 0,0922]
+[23.11.2015 18:42:04] Dichotomy method has been started!
+[23.11.2015 18:42:04] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = -0,0039, alpha_2 = -0,0037
+[23.11.2015 18:42:04] Step 3: f(-0,0039) = 2940,3160 > f(-0,0037) = 2773,3866; a = alpha_1 = -0,0039.
+[23.11.2015 18:42:04] Iter 0: Answer is in the range: [-0,0039; 0,0922]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,0440, alpha_2 = 0,0442
+[23.11.2015 18:42:04] Step 3: f(0,0440) = 43995,5714 <= f(0,0442) = 45209,0463; b = alpha_2 = 0,0442.
+[23.11.2015 18:42:04] Iter 1: Answer is in the range: [-0,0039; 0,0442]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,0201, alpha_2 = 0,0203
+[23.11.2015 18:42:04] Step 3: f(0,0201) = 23,2455 > f(0,0203) = 22,7811; a = alpha_1 = 0,0201.
+[23.11.2015 18:42:04] Iter 2: Answer is in the range: [0,0201; 0,0442]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,0320, alpha_2 = 0,0322
+[23.11.2015 18:42:04] Step 3: f(0,0320) = 5098,9390 <= f(0,0322) = 5353,4841; b = alpha_2 = 0,0322.
+[23.11.2015 18:42:04] Iter 3: Answer is in the range: [0,0201; 0,0322]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,0261, alpha_2 = 0,0263
+[23.11.2015 18:42:04] Step 3: f(0,0261) = 749,6166 <= f(0,0263) = 816,2952; b = alpha_2 = 0,0263.
+[23.11.2015 18:42:04] Iter 4: Answer is in the range: [0,0201; 0,0263]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,0231, alpha_2 = 0,0233
+[23.11.2015 18:42:04] Step 3: f(0,0231) = 145,0191 <= f(0,0233) = 166,4893; b = alpha_2 = 0,0233.
+[23.11.2015 18:42:04] Iter 5: Answer is in the range: [0,0201; 0,0233]
+[23.11.2015 18:42:04] Step 1: counting alpha_1 = 0,0216, alpha_2 = 0,0218
+[23.11.2015 18:42:04] Step 3: f(0,0216) = 44,5514 <= f(0,0218) = 52,5768; b = alpha_2 = 0,0218.
+[23.11.2015 18:42:04] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:04] Iter 6: Answer is in the range: [0,0201; 0,0218]
+[23.11.2015 18:42:04] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0209
+[23.11.2015 18:42:04] Step 9: New alpha 0,0209078125071246
+[23.11.2015 18:42:04] Step 10: New local search point DenseVector 2-Double
+-3,60079
+ 1,98707
+
+[23.11.2015 18:42:04] Step 11: Iteration end.
+[23.11.2015 18:42:04] Step 2: ITERATION number 12
+[23.11.2015 18:42:05] Step 5: Sk = DenseVector 2-Double
+-0,247815
+ 0,519878
+
+[23.11.2015 18:42:05] Step 6: Yk = DenseVector 2-Double
+ -31,9351
+-0,122379
+
+[23.11.2015 18:42:05] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+-0,728022  -0,245124
+-0,245124    1,00025
+
+[23.11.2015 18:42:05] Step 8: Search vector: DenseVector 2-Double
+-62,158
+27,7625
+
+[23.11.2015 18:42:05] DSK method started!
+[23.11.2015 18:42:05] Step 1: f(alpha)=41,6591, f(alpha + h)=34,9368; k=0;
+[23.11.2015 18:42:05] Step 2: a=0,0209, alpha1=0,0219, k=2; Go to step 4!
+[23.11.2015 18:42:05] Step 4: alphak=0,0229
+[23.11.2015 18:42:05] Step 5: h > 0; a=alpha(k-1)=0,0219
+[23.11.2015 18:42:05] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:05] Step 4: alphak=0,0249
+[23.11.2015 18:42:05] Step 5: h > 0; b=alphak=0,0249
+[23.11.2015 18:42:05] Step 6: Interval is: [0,0219 ; 0,0249]
+[23.11.2015 18:42:05] Dichotomy method has been started!
+[23.11.2015 18:42:05] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:05] Step 1: counting alpha_1 = 0,0233, alpha_2 = 0,0235
+[23.11.2015 18:42:05] Step 3: f(0,0233) = 29,7837 > f(0,0235) = 29,6866; a = alpha_1 = 0,0233.
+[23.11.2015 18:42:05] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:05] Iter 0: Answer is in the range: [0,0233; 0,0249]
+[23.11.2015 18:42:05] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0241
+[23.11.2015 18:42:05] Step 9: New alpha 0,0241078125071246
+[23.11.2015 18:42:05] Step 10: New local search point DenseVector 2-Double
+-5,09928
+ 2,65636
+
+[23.11.2015 18:42:05] Step 11: Iteration end.
+[23.11.2015 18:42:05] Step 2: ITERATION number 13
+[23.11.2015 18:42:05] Step 5: Sk = DenseVector 2-Double
+-1,49849
+0,669293
+
+[23.11.2015 18:42:05] Step 6: Yk = DenseVector 2-Double
+-301,503
+ 26,6157
+
+[23.11.2015 18:42:05] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+-1,11323   0,372597
+0,372597  0,0159916
+
+[23.11.2015 18:42:05] Step 8: Search vector: DenseVector 2-Double
+-405,404
+ 138,259
+
+[23.11.2015 18:42:05] DSK method started!
+[23.11.2015 18:42:05] Step 1: f(alpha)=7518815801,3740, f(alpha + h)=8917768062,0498; k=0;
+[23.11.2015 18:42:05] Step 3: b=0,0241, alpha1=0,0251, h=-0,0010, k=2.
+[23.11.2015 18:42:05] Step 4: alphak=0,0221
+[23.11.2015 18:42:05] Step 5: h > 0; b=alpha(k-1)=0,0231
+[23.11.2015 18:42:05] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:05] Step 4: alphak=0,0201
+[23.11.2015 18:42:05] Step 5: h > 0; b=alpha(k-1)=0,0221
+[23.11.2015 18:42:05] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:05] Step 4: alphak=0,0161
+[23.11.2015 18:42:05] Step 5: h > 0; b=alpha(k-1)=0,0201
+[23.11.2015 18:42:05] k = k + 1 = 5; Go to step 4!
+[23.11.2015 18:42:05] Step 4: alphak=0,0081
+[23.11.2015 18:42:05] Step 5: h > 0; b=alpha(k-1)=0,0161
+[23.11.2015 18:42:05] k = k + 1 = 6; Go to step 4!
+[23.11.2015 18:42:05] Step 4: alphak=-0,0079
+[23.11.2015 18:42:05] Step 5: h < 0; a=alphak-0,0079
+[23.11.2015 18:42:05] Step 6: Interval is: [-0,0079 ; 0,0161]
+[23.11.2015 18:42:06] Dichotomy method has been started!
+[23.11.2015 18:42:06] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:06] Step 1: counting alpha_1 = 0,0040, alpha_2 = 0,0042
+[23.11.2015 18:42:06] Step 3: f(0,0040) = 1766481,4504 <= f(0,0042) = 2320046,0849; b = alpha_2 = 0,0042.
+[23.11.2015 18:42:06] Iter 0: Answer is in the range: [-0,0079; 0,0042]
+[23.11.2015 18:42:06] Step 1: counting alpha_1 = -0,0019, alpha_2 = -0,0017
+[23.11.2015 18:42:06] Step 3: f(-0,0019) = 2497374,5068 > f(-0,0017) = 1911196,8302; a = alpha_1 = -0,0019.
+[23.11.2015 18:42:06] Iter 1: Answer is in the range: [-0,0019; 0,0042]
+[23.11.2015 18:42:06] Step 1: counting alpha_1 = 0,0010, alpha_2 = 0,0012
+[23.11.2015 18:42:06] Step 3: f(0,0010) = 348,1377 <= f(0,0012) = 401,1309; b = alpha_2 = 0,0012.
+[23.11.2015 18:42:06] Iter 2: Answer is in the range: [-0,0019; 0,0012]
+[23.11.2015 18:42:06] Step 1: counting alpha_1 = -0,0005, alpha_2 = -0,0003
+[23.11.2015 18:42:06] Step 3: f(-0,0005) = 180058,2391 > f(-0,0003) = 105333,0453; a = alpha_1 = -0,0005.
+[23.11.2015 18:42:06] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:06] Iter 3: Answer is in the range: [-0,0005; 0,0012]
+[23.11.2015 18:42:06] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0004
+[23.11.2015 18:42:06] Step 9: New alpha 0,000389062507124591
+[23.11.2015 18:42:06] Step 10: New local search point DenseVector 2-Double
+-5,25701
+ 2,71015
+
+[23.11.2015 18:42:06] Step 11: Iteration end.
+[23.11.2015 18:42:06] Step 2: ITERATION number 14
+[23.11.2015 18:42:06] Step 5: Sk = DenseVector 2-Double
+-0,157728
+0,0537912
+
+[23.11.2015 18:42:06] Step 6: Yk = DenseVector 2-Double
+-46,4139
+ 3,70152
+
+[23.11.2015 18:42:06] Step 7: Quasi-Newton matrix: 
+DenseMatrix 2x2-Double
+-0,374553  0,708696
+ 0,708696  0,171023
+
+[23.11.2015 18:42:06] Step 8: Search vector: DenseVector 2-Double
+-145,737
+  297,76
+
+[23.11.2015 18:42:06] DSK method started!
+[23.11.2015 18:42:06] Step 1: f(alpha)=351,8275, f(alpha + h)=209,8143; k=0;
+[23.11.2015 18:42:06] Step 2: a=0,0004, alpha1=0,0014, k=2; Go to step 4!
+[23.11.2015 18:42:06] Step 4: alphak=0,0024
+[23.11.2015 18:42:06] Step 5: h > 0; a=alpha(k-1)=0,0014
+[23.11.2015 18:42:06] k = k + 1 = 3; Go to step 4!
+[23.11.2015 18:42:06] Step 4: alphak=0,0044
+[23.11.2015 18:42:06] Step 5: h > 0; a=alpha(k-1)=0,0024
+[23.11.2015 18:42:06] k = k + 1 = 4; Go to step 4!
+[23.11.2015 18:42:06] Step 4: alphak=0,0084
+[23.11.2015 18:42:06] Step 5: h > 0; b=alphak=0,0084
+[23.11.2015 18:42:06] Step 6: Interval is: [0,0024 ; 0,0084]
+[23.11.2015 18:42:06] Dichotomy method has been started!
+[23.11.2015 18:42:06] Counting: delta = eps / 10 = 0,0001
+[23.11.2015 18:42:06] Step 1: counting alpha_1 = 0,0053, alpha_2 = 0,0055
+[23.11.2015 18:42:06] Step 3: f(0,0053) = 4,0021 > f(0,0055) = 2,9576; a = alpha_1 = 0,0053.
+[23.11.2015 18:42:06] Iter 0: Answer is in the range: [0,0053; 0,0084]
+[23.11.2015 18:42:06] Step 1: counting alpha_1 = 0,0067, alpha_2 = 0,0069
+[23.11.2015 18:42:06] Step 3: f(0,0067) = 7,0792 <= f(0,0069) = 9,0259; b = alpha_2 = 0,0069.
+[23.11.2015 18:42:06] Step 4: (b-a)/2 = 0,0008 < eps = 0,0010; STOP SEARCHING!
+[23.11.2015 18:42:06] Iter 1: Answer is in the range: [0,0053; 0,0069]
+[23.11.2015 18:42:06] Step 5: alpha_end = (a+b)/2; Minimum x* is: 0,0061
+[23.11.2015 18:42:06] Step 9: New alpha 0,00611406250712459
+[23.11.2015 18:42:06] Step 10: New local search point DenseVector 2-Double
+-6,14806
+ 4,53068
+
+[23.11.2015 18:42:06] Step 11: Iteration end.
+[23.11.2015 18:42:06] Step 2: ITERATION number 15
