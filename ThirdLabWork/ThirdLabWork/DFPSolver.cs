@@ -83,7 +83,7 @@ namespace ThirdLabWork
             Vector<double> test = Vector<double>.Build.Dense(2, 0);
             test[0] = tempPk.X;
             test[1] = tempPk.Y;
-            pk = test;// -Hk * test;
+            pk = -Hk * test;
             
             LoggerEvs.writeLog(string.Format("Step 8: Search vector: {0}", pk));
         step9:
