@@ -11,7 +11,7 @@ namespace ThirdLabWork
         Vector<double> basicX;
         double eps;
         Vector<double> result = Vector<double>.Build.Dense(2, 0);
-        double alpha = 0.0015f;
+        double alpha = 0.015f;
         public DFPSolver()
         {
 
@@ -33,6 +33,10 @@ namespace ThirdLabWork
             xk = basicX;
             Matrix<double> Hk_1 = Matrix<double>.Build.DenseIdentity(2);
             Matrix<double> Hk = Matrix<double>.Build.DenseIdentity(2);
+            Hk[0, 0] = 1;
+            Hk[1, 1] = 1;
+            Hk[0, 1] = 0;
+            Hk[1, 0] = 0;
             double ak;
             double normalize=0;
             LoggerEvs.writeLog(string.Format("Input data. Start point {0}, epsilon {1:N5}", basicX, eps));
@@ -79,7 +83,7 @@ namespace ThirdLabWork
             Vector<double> test = Vector<double>.Build.Dense(2, 0);
             test[0] = tempPk.X;
             test[1] = tempPk.Y;
-            pk = -Hk * test;
+            pk = test;// -Hk * test;
             
             LoggerEvs.writeLog(string.Format("Step 8: Search vector: {0}", pk));
         step9:
@@ -91,7 +95,7 @@ namespace ThirdLabWork
             LoggerEvs.writeLog(string.Format("Step 9: New alpha {0}", alpha));
         step10:
             xk_1 = xk;
-            //xk = xk + alpha * pk;//??
+            xk = xk + alpha * pk;//??
             LoggerEvs.writeLog(string.Format("Step 10: New local search point {0}", xk));
         step11:
             k++;
@@ -100,7 +104,6 @@ namespace ThirdLabWork
         step12:
             LoggerEvs.writeLog("Step 12: Search is done!");
             Vector2 result = new Vector2(xk[0], xk[1]);
-            ///double sss = taskFunction(new Vector2(0.003, -0.05));
             return result;
         }
 
