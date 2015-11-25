@@ -11,7 +11,10 @@ namespace ThirdLabWork
         Vector<double> basicX;
         double eps;
         Vector<double> result = Vector<double>.Build.Dense(2, 0);
-        double alpha = 0.015f;
+        double alpha = 0f;
+        Func<Vector2, double> func;
+        Vector2 vec2XKmod;
+        Vector<double> sk = Vector<double>.Build.Dense(2, 0), xk = Vector<double>.Build.Dense(2, 0), xk_1 = Vector<double>.Build.Dense(2, 0), yk = Vector<double>.Build.Dense(2, 0), pk = Vector<double>.Build.Dense(2, 0);
         public DFPSolver()
         {
 
@@ -25,11 +28,23 @@ namespace ThirdLabWork
             this.eps = eps;
         }
 
+        public void clear()
+        {
+            alpha = 0f;
+            result = Vector<double>.Build.Dense(2, 0);
+            sk = Vector<double>.Build.Dense(2, 0);
+            yk = Vector<double>.Build.Dense(2, 0);
+            xk = Vector<double>.Build.Dense(2, 0);
+            xk_1 =Vector<double>.Build.Dense(2, 0);
+            pk = Vector<double>.Build.Dense(2, 0);
+        }
+
         public Vector2 calculate(Func<Vector2, double> taskFunction, double h, double epsDich)
         {
+            clear();
+            func = taskFunction;
             LoggerEvs.writeLog("DFP method started");
             Vector<double> grad = Vector<double>.Build.Dense(2,0);
-            Vector<double> sk = Vector<double>.Build.Dense(2,0), xk = Vector<double>.Build.Dense(2,0), xk_1 = Vector<double>.Build.Dense(2,0), yk = Vector<double>.Build.Dense(2,0), pk = Vector<double>.Build.Dense(2,0);
             xk = basicX;
             Matrix<double> Hk_1 = Matrix<double>.Build.DenseIdentity(2);
             Matrix<double> Hk = Matrix<double>.Build.DenseIdentity(2);
@@ -45,7 +60,7 @@ namespace ThirdLabWork
             int k = 0;
         step2:
             LoggerEvs.writeLog(string.Format("Step 2: ITERATION number {0}", k));
-            Vector2 gradTemp = Gradient.get(alpha, new Vector2(xk[0], xk[1]), taskFunction);
+            Vector2 gradTemp = Gradient.get(0.0001f, new Vector2(xk[0], xk[1]), taskFunction);
             grad[0] = gradTemp.X;
             grad[1] = gradTemp.Y;
         step3:
@@ -65,7 +80,7 @@ namespace ThirdLabWork
             sk = xk - xk_1;
             LoggerEvs.writeLog(string.Format("Step 5: Sk = {0}", sk));
         step6:
-            Vector2 ykTemp = Gradient.get(alpha, new Vector2(xk[0], xk[1]), taskFunction) - Gradient.get(alpha, new Vector2(xk_1[0], xk_1[1]), taskFunction);
+            Vector2 ykTemp = Gradient.get(0.0001f, new Vector2(xk[0], xk[1]), taskFunction) - Gradient.get(0.0001f, new Vector2(xk_1[0], xk_1[1]), taskFunction);
             yk[0] = ykTemp.X;
             yk[1] = ykTemp.Y;
             LoggerEvs.writeLog(string.Format("Step 6: Yk = {0}", yk));
@@ -79,19 +94,19 @@ namespace ThirdLabWork
             Hk = Hk_1 - firstUp / firstDown[0, 0] + secondUp / secondDown[0, 0];
             LoggerEvs.writeLog(string.Format("Step 7: Quasi-Newton matrix: \r\n{0}", Hk));
         step8:
-            Vector2 tempPk = Gradient.get(alpha, new Vector2(xk[0], xk[1]), taskFunction);
+            Vector2 tempPk = Gradient.get(0.001f, new Vector2(xk[0], xk[1]), taskFunction);
             Vector<double> test = Vector<double>.Build.Dense(2, 0);
             test[0] = tempPk.X;
             test[1] = tempPk.Y;
-            pk = -Hk * test;
+            pk = -1*Hk * test;
             
             LoggerEvs.writeLog(string.Format("Step 8: Search vector: {0}", pk));
         step9:
             Vector<double> tmpxk = xk + alpha * pk;
-            Vector2 gradientValue = Gradient.get(alpha, new Vector2(tmpxk[0], tmpxk[1]), taskFunction);            
-            Interval alphaValues = DSKMethodCounter.countInterval(taskFunction, alpha, new Vector2(tmpxk[0], tmpxk[1]), gradientValue, h);
-            
-            alpha = DichotomyMethodCounter.findMinimum(taskFunction, alphaValues, epsDich, new Vector2(tmpxk[0], tmpxk[1]), gradientValue);
+            vec2XKmod = new Vector2(tmpxk[0], tmpxk[1]);
+            Vector2 gradientValue = Gradient.get(0.0001f, vec2XKmod, taskFunction);
+            LinearInterval alphaValues = LocalizationMethod.calculate(alpha,eps/10,minimizeFunc);
+            alpha = pouelMethod.calculate(alphaValues,eps/10,minimizeFunc);
             LoggerEvs.writeLog(string.Format("Step 9: New alpha {0}", alpha));
         step10:
             xk_1 = xk;
@@ -105,6 +120,12 @@ namespace ThirdLabWork
             LoggerEvs.writeLog("Step 12: Search is done!");
             Vector2 result = new Vector2(xk[0], xk[1]);
             return result;
+        }
+
+        public double minimizeFunc(double arg)
+        {
+            var res = func(new Vector2((xk + arg * pk)[0],(xk + arg * pk)[1]));
+            return res;
         }
 
         public Vector2 returnApproximateSolution(Vector2 x, double eps, Func<Vector2, double> taskFunction, double h, double epsDich)

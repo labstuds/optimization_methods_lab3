@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PouelMethod.cs" />
     <Compile Include="CountFirstOrderPartialDerivatives.cs" />
     <Compile Include="DFPSolver.cs" />
     <Compile Include="DichotomyMethodCounter.cs" />

@@ -55,13 +55,13 @@
             this.DFPMethodX1Numeric = new System.Windows.Forms.NumericUpDown();
             this.DFPMethodX0Numeric = new System.Windows.Forms.NumericUpDown();
             this.gbCountMethods = new System.Windows.Forms.GroupBox();
-            this.gbCountProcess = new System.Windows.Forms.GroupBox();
-            this.rtbLog = new System.Windows.Forms.RichTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.nudDichoEps = new System.Windows.Forms.NumericUpDown();
+            this.gbMinimizationParams = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.nudDSKStep = new System.Windows.Forms.NumericUpDown();
-            this.gbMinimizationParams = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nudDichoEps = new System.Windows.Forms.NumericUpDown();
+            this.gbCountProcess = new System.Windows.Forms.GroupBox();
+            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.tcOGM.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -77,10 +77,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodX1Numeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodX0Numeric)).BeginInit();
             this.gbCountMethods.SuspendLayout();
-            this.gbCountProcess.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDichoEps)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDSKStep)).BeginInit();
             this.gbMinimizationParams.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDSKStep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDichoEps)).BeginInit();
+            this.gbCountProcess.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcOGM
@@ -345,12 +345,17 @@
             // DFPMethodEpsNumeric
             // 
             this.DFPMethodEpsNumeric.DecimalPlaces = 5;
+            this.DFPMethodEpsNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            262144});
             this.DFPMethodEpsNumeric.Location = new System.Drawing.Point(181, 22);
             this.DFPMethodEpsNumeric.Maximum = new decimal(new int[] {
-            10,
+            999999,
             0,
             0,
-            0});
+            393216});
             this.DFPMethodEpsNumeric.Minimum = new decimal(new int[] {
             1,
             0,
@@ -452,62 +457,19 @@
             this.gbCountMethods.TabStop = false;
             this.gbCountMethods.Text = "Методы вычислений";
             // 
-            // gbCountProcess
+            // gbMinimizationParams
             // 
-            this.gbCountProcess.Controls.Add(this.rtbLog);
-            this.gbCountProcess.Location = new System.Drawing.Point(12, 208);
-            this.gbCountProcess.Name = "gbCountProcess";
-            this.gbCountProcess.Size = new System.Drawing.Size(625, 146);
-            this.gbCountProcess.TabIndex = 2;
-            this.gbCountProcess.TabStop = false;
-            this.gbCountProcess.Text = "Ход вычислений";
-            // 
-            // rtbLog
-            // 
-            this.rtbLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbLog.Location = new System.Drawing.Point(3, 16);
-            this.rtbLog.Name = "rtbLog";
-            this.rtbLog.Size = new System.Drawing.Size(619, 127);
-            this.rtbLog.TabIndex = 0;
-            this.rtbLog.Text = "";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(15, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(175, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Eps для дихотомии";
-            // 
-            // nudDichoEps
-            // 
-            this.nudDichoEps.DecimalPlaces = 10;
-            this.nudDichoEps.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.nudDichoEps.Location = new System.Drawing.Point(36, 68);
-            this.nudDichoEps.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudDichoEps.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            655360});
-            this.nudDichoEps.Name = "nudDichoEps";
-            this.nudDichoEps.Size = new System.Drawing.Size(122, 20);
-            this.nudDichoEps.TabIndex = 11;
-            this.nudDichoEps.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
+            this.gbMinimizationParams.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbMinimizationParams.Controls.Add(this.label10);
+            this.gbMinimizationParams.Controls.Add(this.nudDSKStep);
+            this.gbMinimizationParams.Controls.Add(this.label9);
+            this.gbMinimizationParams.Controls.Add(this.nudDichoEps);
+            this.gbMinimizationParams.Location = new System.Drawing.Point(414, 16);
+            this.gbMinimizationParams.Name = "gbMinimizationParams";
+            this.gbMinimizationParams.Size = new System.Drawing.Size(205, 167);
+            this.gbMinimizationParams.TabIndex = 14;
+            this.gbMinimizationParams.TabStop = false;
+            this.gbMinimizationParams.Text = "Параметры для метода одномерной минимазации";
             // 
             // label10
             // 
@@ -547,19 +509,62 @@
             0,
             196608});
             // 
-            // gbMinimizationParams
+            // label9
             // 
-            this.gbMinimizationParams.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbMinimizationParams.Controls.Add(this.label10);
-            this.gbMinimizationParams.Controls.Add(this.nudDSKStep);
-            this.gbMinimizationParams.Controls.Add(this.label9);
-            this.gbMinimizationParams.Controls.Add(this.nudDichoEps);
-            this.gbMinimizationParams.Location = new System.Drawing.Point(414, 16);
-            this.gbMinimizationParams.Name = "gbMinimizationParams";
-            this.gbMinimizationParams.Size = new System.Drawing.Size(205, 167);
-            this.gbMinimizationParams.TabIndex = 14;
-            this.gbMinimizationParams.TabStop = false;
-            this.gbMinimizationParams.Text = "Параметры для метода одномерной минимазации";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(15, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(175, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Eps для дихотомии";
+            // 
+            // nudDichoEps
+            // 
+            this.nudDichoEps.DecimalPlaces = 10;
+            this.nudDichoEps.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.nudDichoEps.Location = new System.Drawing.Point(36, 68);
+            this.nudDichoEps.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDichoEps.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            655360});
+            this.nudDichoEps.Name = "nudDichoEps";
+            this.nudDichoEps.Size = new System.Drawing.Size(122, 20);
+            this.nudDichoEps.TabIndex = 11;
+            this.nudDichoEps.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            // 
+            // gbCountProcess
+            // 
+            this.gbCountProcess.Controls.Add(this.rtbLog);
+            this.gbCountProcess.Location = new System.Drawing.Point(12, 208);
+            this.gbCountProcess.Name = "gbCountProcess";
+            this.gbCountProcess.Size = new System.Drawing.Size(625, 146);
+            this.gbCountProcess.TabIndex = 2;
+            this.gbCountProcess.TabStop = false;
+            this.gbCountProcess.Text = "Ход вычислений";
+            // 
+            // rtbLog
+            // 
+            this.rtbLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbLog.Location = new System.Drawing.Point(3, 16);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.Size = new System.Drawing.Size(619, 127);
+            this.rtbLog.TabIndex = 0;
+            this.rtbLog.Text = "";
             // 
             // Form1
             // 
@@ -593,11 +598,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodX1Numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodX0Numeric)).EndInit();
             this.gbCountMethods.ResumeLayout(false);
-            this.gbCountProcess.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudDichoEps)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDSKStep)).EndInit();
             this.gbMinimizationParams.ResumeLayout(false);
             this.gbMinimizationParams.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDSKStep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDichoEps)).EndInit();
+            this.gbCountProcess.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

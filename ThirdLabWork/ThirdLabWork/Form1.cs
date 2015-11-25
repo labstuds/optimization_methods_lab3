@@ -46,7 +46,7 @@ namespace ThirdLabWork
             double epsDich = (double)nudDichoEps.Value;
 
             Vector2 result = DFPCalculator.returnApproximateSolution(new Vector2((double)this.DFPMethodX0Numeric.Value, (double)this.DFPMethodX1Numeric.Value), (double)this.DFPMethodEpsNumeric.Value, taskFunction, h, epsDich);
-            DFPMethodAnswerLabel.Text = String.Format("Ответ: Fmin({0})={1}",result,taskFunction(result));
+            DFPMethodAnswerLabel.Text = String.Format("Ответ: Fmin({0})={1:N4}",result,taskFunction(result));
         }
 
         public static double taskFunction(Vector2 args)

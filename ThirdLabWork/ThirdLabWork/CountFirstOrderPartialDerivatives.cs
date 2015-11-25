@@ -69,10 +69,10 @@ namespace ThirdLabWork
     {
         public static Vector2 get(double alpha, Vector2 args, Func<Vector2, double> taskFunction)
         {
-            if (alpha >= 0.01)
+          //  if (alpha >= 0.001)
                return CountCentralScheme.Instance.countDerivative(alpha, args, taskFunction);
-            else
-                return CountRightScheme.Instance.countDerivative(alpha, args, taskFunction);
+            //else
+              //  return CountRightScheme.Instance.countDerivative(alpha, args, taskFunction);
         }
     }
 }
