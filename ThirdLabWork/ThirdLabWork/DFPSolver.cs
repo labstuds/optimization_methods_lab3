@@ -39,7 +39,7 @@ namespace ThirdLabWork
             pk = Vector<double>.Build.Dense(2, 0);
         }
 
-        public Vector2 calculate(Func<Vector2, double> taskFunction, double h, double epsDich)
+        public Vector2 calculate(Func<Vector2, double> taskFunction)
         {
             clear();
             func = taskFunction;
@@ -128,10 +128,10 @@ namespace ThirdLabWork
             return res;
         }
 
-        public Vector2 returnApproximateSolution(Vector2 x, double eps, Func<Vector2, double> taskFunction, double h, double epsDich)
+        public Vector2 returnApproximateSolution(Vector2 x, double eps, Func<Vector2, double> taskFunction)
         {
             setStartingVariables(x, eps);
-            return calculate(taskFunction, h, epsDich);
+            return calculate(taskFunction);
         }
     }
 }
