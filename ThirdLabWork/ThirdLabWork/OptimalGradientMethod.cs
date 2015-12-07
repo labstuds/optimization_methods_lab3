@@ -118,7 +118,7 @@ namespace ThirdLabWork
         /// </summary>
         /// <param name="order">Порядок</param>
         /// <returns>Шаг для ДСК</returns>
-        private static double countDSKStep(double order)
+        public static double countDSKStep(double order)
         {
             return 1 / Math.Pow(10, order + 5);
         }
@@ -128,7 +128,7 @@ namespace ThirdLabWork
         /// </summary>
         /// <param name="order">Порядок</param>
         /// <returns>Начальный шаг alpha</returns>
-        private static double countStartAlphaStep(double order)
+        public static double countStartAlphaStep(double order)
         {
             return 1 / Math.Pow(10, order + 3);
         }
