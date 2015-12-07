@@ -13,6 +13,7 @@ namespace ThirdLabWork
         Vector<double> result = Vector<double>.Build.Dense(2, 0);
         double alpha = 0f;
         Func<Vector2, double> func;
+        double scale = 0.00001f;
         Vector2 vec2XKmod;
         Vector<double> sk = Vector<double>.Build.Dense(2, 0), xk = Vector<double>.Build.Dense(2, 0), xk_1 = Vector<double>.Build.Dense(2, 0), yk = Vector<double>.Build.Dense(2, 0), pk = Vector<double>.Build.Dense(2, 0);
         public DFPSolver()
@@ -60,7 +61,7 @@ namespace ThirdLabWork
             int k = 0;
         step2:
             LoggerEvs.writeLog(string.Format("Step 2: ITERATION number {0}", k));
-            Vector2 gradTemp = Gradient.get(0.0001f, new Vector2(xk[0], xk[1]), taskFunction);
+            Vector2 gradTemp = Gradient.get(scale, new Vector2(xk[0], xk[1]), taskFunction);
             grad[0] = gradTemp.X;
             grad[1] = gradTemp.Y;
         step3:
@@ -80,7 +81,7 @@ namespace ThirdLabWork
             sk = xk - xk_1;
             LoggerEvs.writeLog(string.Format("Step 5: Sk = {0}", sk));
         step6:
-            Vector2 ykTemp = Gradient.get(0.0001f, new Vector2(xk[0], xk[1]), taskFunction) - Gradient.get(0.0001f, new Vector2(xk_1[0], xk_1[1]), taskFunction);
+            Vector2 ykTemp = Gradient.get(scale, new Vector2(xk[0], xk[1]), taskFunction) - Gradient.get(scale, new Vector2(xk_1[0], xk_1[1]), taskFunction);
             yk[0] = ykTemp.X;
             yk[1] = ykTemp.Y;
             LoggerEvs.writeLog(string.Format("Step 6: Yk = {0}", yk));
@@ -94,7 +95,7 @@ namespace ThirdLabWork
             Hk = Hk_1 - firstUp / firstDown[0, 0] + secondUp / secondDown[0, 0];
             LoggerEvs.writeLog(string.Format("Step 7: Quasi-Newton matrix: \r\n{0}", Hk));
         step8:
-            Vector2 tempPk = Gradient.get(0.001f, new Vector2(xk[0], xk[1]), taskFunction);
+            Vector2 tempPk = Gradient.get(scale, new Vector2(xk[0], xk[1]), taskFunction);
             Vector<double> test = Vector<double>.Build.Dense(2, 0);
             test[0] = tempPk.X;
             test[1] = tempPk.Y;
@@ -104,9 +105,11 @@ namespace ThirdLabWork
         step9:
             Vector<double> tmpxk = xk + alpha * pk;
             vec2XKmod = new Vector2(tmpxk[0], tmpxk[1]);
-            Vector2 gradientValue = Gradient.get(0.0001f, vec2XKmod, taskFunction);
-            LinearInterval alphaValues = LocalizationMethod.calculate(alpha,eps/10,minimizeFunc);
-            alpha = pouelMethod.calculate(alphaValues,eps/10,minimizeFunc);
+            Vector2 gradientValue = Gradient.get(scale, vec2XKmod, taskFunction);
+            double inputOrder = OptimalGradientMethod.findPositiveOrder(Math.Max(Math.Abs(basicX[0]), Math.Abs(basicX[1])));
+            double dichotomyEpsilon = OptimalGradientMethod.countDichotomyEps(inputOrder);
+            LinearInterval alphaValues = LocalizationMethod.calculate(alpha,eps,minimizeFunc);
+            alpha = DichotomyMethodCounter.findMinimum(taskFunction, new Interval(alphaValues.LeftBorder,alphaValues.RightBorder), dichotomyEpsilon, vec2XKmod, gradientValue);//pouelMethod.calculate(alphaValues,eps/10,minimizeFunc);
             LoggerEvs.writeLog(string.Format("Step 9: New alpha {0}", alpha));
         step10:
             xk_1 = xk;

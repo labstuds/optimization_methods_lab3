@@ -37,6 +37,10 @@
             this.nudEps = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.nudStartX2 = new System.Windows.Forms.NumericUpDown();
+            this.nudStartX1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DFPCalculateButton = new System.Windows.Forms.Button();
             this.DFPMethodAnswerLabel = new System.Windows.Forms.Label();
@@ -50,15 +54,16 @@
             this.gbCountMethods = new System.Windows.Forms.GroupBox();
             this.gbCountProcess = new System.Windows.Forms.GroupBox();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nudStartX2 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nudStartX1 = new System.Windows.Forms.NumericUpDown();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tcOGM.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEps)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStartX2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStartX1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodEpsNumeric)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -66,14 +71,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodX0Numeric)).BeginInit();
             this.gbCountMethods.SuspendLayout();
             this.gbCountProcess.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStartX2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStartX1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcOGM
             // 
             this.tcOGM.Controls.Add(this.tabPage1);
             this.tcOGM.Controls.Add(this.tabPage2);
+            this.tcOGM.Controls.Add(this.tabPage3);
             this.tcOGM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcOGM.Location = new System.Drawing.Point(3, 16);
             this.tcOGM.Name = "tcOGM";
@@ -193,6 +198,72 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Начальная точка";
             // 
+            // nudStartX2
+            // 
+            this.nudStartX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudStartX2.DecimalPlaces = 2;
+            this.nudStartX2.Increment = new decimal(new int[] {
+            25,
+            0,
+            0,
+            131072});
+            this.nudStartX2.Location = new System.Drawing.Point(283, 18);
+            this.nudStartX2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudStartX2.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.nudStartX2.Name = "nudStartX2";
+            this.nudStartX2.Size = new System.Drawing.Size(174, 20);
+            this.nudStartX2.TabIndex = 3;
+            // 
+            // nudStartX1
+            // 
+            this.nudStartX1.DecimalPlaces = 2;
+            this.nudStartX1.Increment = new decimal(new int[] {
+            25,
+            0,
+            0,
+            131072});
+            this.nudStartX1.Location = new System.Drawing.Point(38, 18);
+            this.nudStartX1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudStartX1.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            -2147483648});
+            this.nudStartX1.Name = "nudStartX1";
+            this.nudStartX1.Size = new System.Drawing.Size(174, 20);
+            this.nudStartX1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(251, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "X2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "X1";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.DFPCalculateButton);
@@ -203,7 +274,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(746, 96);
+            this.tabPage2.Size = new System.Drawing.Size(606, 96);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "2.2.3. Метод переменной метрики Дэвидона-Флетчера-Пауэлла ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -371,72 +442,42 @@
             this.rtbLog.Size = new System.Drawing.Size(611, 185);
             this.rtbLog.TabIndex = 0;
             this.rtbLog.Text = "";
+            this.rtbLog.Click += new System.EventHandler(this.rtbLog_Click);
             // 
-            // label2
+            // tabPage3
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(251, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "X2";
+            this.tabPage3.Controls.Add(this.radioButton2);
+            this.tabPage3.Controls.Add(this.radioButton1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(606, 96);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Задача";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // nudStartX2
+            // radioButton1
             // 
-            this.nudStartX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudStartX2.DecimalPlaces = 2;
-            this.nudStartX2.Increment = new decimal(new int[] {
-            25,
-            0,
-            0,
-            131072});
-            this.nudStartX2.Location = new System.Drawing.Point(283, 18);
-            this.nudStartX2.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudStartX2.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.nudStartX2.Name = "nudStartX2";
-            this.nudStartX2.Size = new System.Drawing.Size(174, 20);
-            this.nudStartX2.TabIndex = 3;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(5, 3);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(111, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.Text = "Тестовая задача";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // label1
+            // radioButton2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "X1";
-            // 
-            // nudStartX1
-            // 
-            this.nudStartX1.DecimalPlaces = 2;
-            this.nudStartX1.Increment = new decimal(new int[] {
-            25,
-            0,
-            0,
-            131072});
-            this.nudStartX1.Location = new System.Drawing.Point(38, 18);
-            this.nudStartX1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudStartX1.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
-            this.nudStartX1.Name = "nudStartX1";
-            this.nudStartX1.Size = new System.Drawing.Size(174, 20);
-            this.nudStartX1.TabIndex = 2;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Location = new System.Drawing.Point(5, 26);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(106, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Учебная задача";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // Form1
             // 
@@ -456,6 +497,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudEps)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStartX2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStartX1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodEpsNumeric)).EndInit();
@@ -465,8 +508,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DFPMethodX0Numeric)).EndInit();
             this.gbCountMethods.ResumeLayout(false);
             this.gbCountProcess.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudStartX2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStartX1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -499,6 +542,9 @@
         private System.Windows.Forms.NumericUpDown nudStartX1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

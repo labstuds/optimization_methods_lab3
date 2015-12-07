@@ -88,7 +88,7 @@ namespace ThirdLabWork
         /// </summary>
         /// <param name="value">Число, порядок которого нужно найти</param>
         /// <returns>Порядок</returns>
-        private static double findPositiveOrder(double value)
+        public static double findPositiveOrder(double value)
         {
             double order = 0;
             for(int i = 1; value >= 10; i++)
@@ -104,7 +104,7 @@ namespace ThirdLabWork
         /// </summary>
         /// <param name="order">Порядок</param>
         /// <returns>Точность</returns>
-        private static double countDichotomyEps(double order)
+        public static double countDichotomyEps(double order)
         {
             double eps = 0.01;
             if(order > 0)
