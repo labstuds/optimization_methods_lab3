@@ -37,11 +37,14 @@ namespace ThirdLabWork
             {
                 LoggerEvs.writeLog(string.Format("ITER {0}:", k));
                 LoggerEvs.writeLog(string.Format("Step 1: k = {0};", k));
-                
+
+                gradientValue = CountCentralScheme.Instance.countDerivative(0.01, args, taskFunction);
+                /*
                 if (alpha >= 0.00001)
                     gradientValue = CountCentralScheme.Instance.countDerivative(alpha, args, taskFunction);
                 else 
                     gradientValue = CountRightScheme.Instance.countDerivative(alpha, args, taskFunction);
+                 */
                 LoggerEvs.writeLog(string.Format("Step 2: gradient is ({0}, {1});", gradientValue.X, gradientValue.Y));
                 // Шаг 3
                 if (gradientValue.getEuclidNorm() <= eps)
